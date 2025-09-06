@@ -41,7 +41,7 @@ Cette partie correspond à la concéption et à la réalisation des amplificateu
 
 Cette partie vise à traiter le son et assurer une communication synchrone entre le microcontrôleur maître et les amplis.
 
-#### Fonctions clés
+#### Fonctions clés
 
 - Extraction des pistes (gauche/droite, avant/arrière)
 - Synchronisation des amplis
