@@ -1,9 +1,9 @@
 # **Son Spatial**
-*(Projet étudiant – 2025)*
+*Projet étudiant S7*
 
 ## Description du projet 
 
-Ce projet a pour objectif de créer un système audio immersif grâce à un réseau d’amplificateurs audio, capables de spatialiser le son. Le principe repose sur la distribution et le traitement différencié des signaux audio entre plusieurs amplificateurs, afin de recréer une expérience sonore 3D pour l’utilisateur.
+Ce projet a pour objectif de créer un système audio immersif mobile grâce à un réseau d’amplificateurs audio, capables de spatialiser le son. Le principe repose sur la distribution et le traitement différencié des signaux audio entre plusieurs amplificateurs, afin de recréer une expérience sonore 3D pour l’utilisateur.
 
 ### Principe de fonctionnement 
 
@@ -37,9 +37,16 @@ Cette partie correspond à la concéption et à la réalisation des amplificateu
 - Conversion numérique → analogique
 - Amplification du signal
 
-## Partie Informatique
+### Partie Informatique
 
-Cette partie vise à traiter le son et assurer une communication synchrone entre le microcontrôleur maître et les amplis.
+Cette partie comporte la programmation du microcontroleur (esp32), Rasberry PI, application mobile.
+On vise à traiter le son et assurer une communication synchrone entre le microcontrôleur maître et les amplis.
+Le traitement de signal sera géré par la Rasberry Pi commandé via une interface mobile. 
+
+
+### Partie mécanique
+
+Cette partie vise à conceptionner plusieurs robots capables de se déplacer dans une pièce. 
 
 #### Fonctions clés
 
