@@ -53,3 +53,9 @@ Cette partie vise à conceptionner plusieurs robots capables de se déplacer dan
 - Extraction des pistes (gauche/droite, avant/arrière)
 - Synchronisation des amplis
 
+
+## Ressources
+
+### Lien utile
+
+https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0
