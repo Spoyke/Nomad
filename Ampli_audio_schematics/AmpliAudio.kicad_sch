@@ -1,0 +1,140 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "1b1d6a8b-6126-404f-8c91-82fafa547cd5")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 13.97 15.24)
+		(size 30.48 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2460c4d7-7146-45fb-9d12-b00cf4c2c821")
+		(property "Sheetname" "Alimentation"
+			(at 13.97 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Alimentation.kicad_sch"
+			(at 13.97 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AmpliAudio"
+				(path "/1b1d6a8b-6126-404f-8c91-82fafa547cd5"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 87.63 15.24)
+		(size 26.67 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "35a82f69-b768-4bcc-bf2a-e6427a70156b")
+		(property "Sheetname" "ESP32"
+			(at 87.63 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 87.63 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AmpliAudio"
+				(path "/1b1d6a8b-6126-404f-8c91-82fafa547cd5"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 46.99 15.24)
+		(size 38.1 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f700fa29-6b57-43e7-b6f2-9fb5137c62b6")
+		(property "Sheetname" "Traitement du signal"
+			(at 46.99 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Traitement_du_signal.kicad_sch"
+			(at 46.99 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "AmpliAudio"
+				(path "/1b1d6a8b-6126-404f-8c91-82fafa547cd5"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
