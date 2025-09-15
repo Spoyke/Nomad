@@ -11,7 +11,7 @@ Ce projet a pour objectif de créer un système audio immersif mobile grâce à 
 
 - Reçoit le contenu audio à diffuser (ex : musique, film, jeu vidéo).
 - Traite et décompose le signal audio pour chaque ampli, en fonction de leur position relative par rapport à l’utilisateur.
-- Envoie les données audio adaptées à chaque ampli via un protocole de communication (filaire ou sans fil).
+- Envoie les données audio adaptées à chaque ampli via un protocole de communication sans fil.
 
 #### Amplificateurs audio
 
