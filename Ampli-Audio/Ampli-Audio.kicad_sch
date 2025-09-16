@@ -1,0 +1,140 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "0bccf54c-be40-4fd0-9c84-cefe1be3bfea")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 104.14 15.24)
+		(size 44.45 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "26f9ae4b-2844-48ac-aa8a-32a8a7b705c3")
+		(property "Sheetname" "Traitement_du_signal"
+			(at 104.14 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Traitement_du_signal.kicad_sch"
+			(at 104.14 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Ampli-Audio"
+				(path "/0bccf54c-be40-4fd0-9c84-cefe1be3bfea"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 12.7 15.24)
+		(size 44.45 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bf4e6dde-6dba-4246-8e57-4d12ec12539b")
+		(property "Sheetname" "Alimentation"
+			(at 12.7 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Alimentation.kicad_sch"
+			(at 12.7 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Ampli-Audio"
+				(path "/0bccf54c-be40-4fd0-9c84-cefe1be3bfea"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 58.42 15.24)
+		(size 44.45 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c0f1b15d-c061-49bf-86e2-3fa942cd902b")
+		(property "Sheetname" "ESP32"
+			(at 58.42 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32.kicad_sch"
+			(at 58.42 43.7646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Ampli-Audio"
+				(path "/0bccf54c-be40-4fd0-9c84-cefe1be3bfea"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
