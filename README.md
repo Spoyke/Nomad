@@ -55,7 +55,7 @@ Cette partie vise à conceptionner plusieurs robots capables de se déplacer dan
 
 ## Séance 1 (16/09/2025)
 
-Julie, Simon, Gabriel :
+*Julie, Simon, Gabriel* :
 
 Réalisation en amont des schématique :
 - Amplificateur audio pour diffuser du son via une application mobile
@@ -63,10 +63,14 @@ Réalisation en amont des schématique :
   
 Mettre en commun les schématique afin de commander les composantes. 
 
-Axel, Aleksandar : 
+*Axel, Aleksandar* : 
 
 Etablir une communication entre les esp32 - Rasberry Pi - Téléphone
 Transmission de son via une application mobile
+
+Planning prévisionnel :
+
+<img width="1354" height="362" alt="image" src="https://github.com/user-attachments/assets/6d0e3242-3ce1-4a6d-a6a6-cdb654a1a0d4" />
 
 
 ## Ressources
