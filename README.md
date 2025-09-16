@@ -3,7 +3,7 @@
 
 ## Description du projet 
 
-Ce projet a pour objectif de créer un système audio immersif mobile grâce à un réseau d’amplificateurs audio, capables de spatialiser le son. Le principe repose sur la distribution et le traitement différencié des signaux audio entre plusieurs amplificateurs, afin de recréer une expérience sonore 3D pour l’utilisateur.
+Ce projet a pour objectif de créer un système audio immersif mobile grâce à un réseau d’amplificateurs audio, capables de spatialiser le son. Le principe repose sur la distribution et le traitement différencié des signaux audio entre plusieurs amplificateurs, afin de recréer une expérience sonore 3D pour l’utilisateur. Le système s'adapte aux différentes pièces pour trouver 
 
 ### Principe de fonctionnement 
 
@@ -53,9 +53,27 @@ Cette partie vise à conceptionner plusieurs robots capables de se déplacer dan
 - Extraction des pistes (gauche/droite, avant/arrière)
 - Synchronisation des amplis
 
+## Séance 1 (16/09/2025)
+
+Julie, Simon, Gabriel :
+
+Réalisation en amont des schématique :
+- Amplificateur audio pour diffuser du son via une application mobile
+- Mécanique pour déplacer l'enceinte et éviter les obstacles
+  
+Mettre en commun les schématique afin de commander les composantes. 
+
+Axel, Aleksandar : 
+
+Etablir une communication entre les esp32 - Rasberry Pi - Téléphone
+Transmission de son via une application mobile
+
 
 ## Ressources
 
 ### Lien utile
 
 https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0
+
+### RSE
+
