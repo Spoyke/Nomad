@@ -68,6 +68,17 @@ Mettre en commun les schématique afin de commander les composantes.
 Etablir une communication entre les esp32 - Rasberry Pi - Téléphone
 Transmission de son via une application mobile
 
+## Séance 2 (23/09/2025)
+
+"Julie, Simon, Gabriel" : 
+
+- Fin de la réalisation et mise en commun des schémas de l'ampli audio et du robot.
+- Début de la conception du PCB
+
+
+"Globale" :
+- Recherche sur la façon dont les robots se localiser et comment l'implémenter 
+
 Planning prévisionnel :
 
 <img width="1354" height="362" alt="image" src="https://github.com/user-attachments/assets/6d0e3242-3ce1-4a6d-a6a6-cdb654a1a0d4" />
