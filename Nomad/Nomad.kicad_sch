@@ -3689,6 +3689,30 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Projet S7 \"Nomad\""
+		(exclude_from_sim no)
+		(at 186.182 189.738 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+				(thickness 0.2381)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "cd4079c7-3dc8-431f-90ab-8bbaddfa2b3e")
+	)
+	(text "1.0"
+		(exclude_from_sim no)
+		(at 269.748 193.548 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f86f0ce2-15d4-4478-a226-f083d2e1096d")
+	)
 	(text_box "Amplificateur audio"
 		(exclude_from_sim no)
 		(at 140.97 12.7 0)
@@ -4042,6 +4066,12 @@
 		(uuid "67cc78fe-3697-4d2e-87e1-5b5629e0d524")
 	)
 	(junction
+		(at 46.99 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6c24a2c0-6bcd-4453-af0b-e58197ad3ef5")
+	)
+	(junction
 		(at 247.65 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4160,12 +4190,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f024a42a-c730-40f6-a01c-91f1ea21f0b9")
-	)
-	(junction
-		(at 36.83 35.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fec63c45-4dd3-4d74-aac8-00f9f174a791")
 	)
 	(no_connect
 		(at 21.59 107.95)
@@ -4479,16 +4503,6 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 35.56) (xy 36.83 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16694f13-d003-4c85-88e0-ffbfa91d2d7c")
-	)
-	(wire
-		(pts
 			(xy 222.25 54.61) (xy 234.95 54.61)
 		)
 		(stroke
@@ -4769,7 +4783,7 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 35.56) (xy 48.26 35.56)
+			(xy 45.72 35.56) (xy 46.99 35.56)
 		)
 		(stroke
 			(width 0)
@@ -5949,7 +5963,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 35.56) (xy 38.1 35.56)
+			(xy 35.56 35.56) (xy 38.1 35.56)
 		)
 		(stroke
 			(width 0)
@@ -6086,6 +6100,16 @@
 			(type default)
 		)
 		(uuid "e52b6c10-567d-4e4f-97cb-e944fb324506")
+	)
+	(wire
+		(pts
+			(xy 46.99 35.56) (xy 48.26 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e89bc155-5a11-467f-8407-6cc4e784fac6")
 	)
 	(wire
 		(pts
@@ -9155,7 +9179,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 36.83 35.56 0)
+		(at 46.99 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9163,7 +9187,7 @@
 		(dnp no)
 		(uuid "632fdd4d-1218-473b-9e77-efaa69229b34")
 		(property "Reference" "#FLG01"
-			(at 36.83 33.655 0)
+			(at 46.99 33.655 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9172,7 +9196,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 36.83 27.94 0)
+			(at 46.99 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9180,7 +9204,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 35.56 0)
+			(at 46.99 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9189,7 +9213,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 36.83 35.56 0)
+			(at 46.99 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9198,7 +9222,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 36.83 35.56 0)
+			(at 46.99 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
