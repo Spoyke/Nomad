@@ -73,11 +73,13 @@ Transmission de son via une application mobile
 "Julie, Simon, Gabriel" : 
 
 - Fin de la réalisation et mise en commun des schémas de l'ampli audio et du robot.
-- Début de la conception du PCB
+- Ajout d'un capteur à ultrason au robot pour qu'il puisse détecter et anticiper les obstacles. Utilisation du HC-SR04.
+- Choix final de l'esp32 et des empreintes des composants pour le PCB. 
+- Début de la conception du PCB.
 
 
 "Globale" :
-- Recherche sur la façon dont les robots se localiser et comment l'implémenter 
+- Recherche sur la façon dont les robots se localiser et comment l'implémenter : On utilisera l'intensité du signal émit par la raspberry pi à l'esp32 pour déterminer la distance entre les deux (plus l'intensité est faible, plus la distance est grande)
 
 Planning prévisionnel :
 
