@@ -1,6 +1,4 @@
 (fp_lib_table
   (version 7)
-  (lib (name "TAS2780")(type "KiCad")(uri "/home/sdpr/Documents/Symboles_Kicad/TAS2780/TAS2780.pretty")(options "")(descr ""))
-  (lib (name "ESP32DEVKITC_32UE")(type "KiCad")(uri "/home/sdpr/Documents/Symboles_Kicad/ESP32_DEVKITC_32UE/ESP32DEVKITC_32UE.pretty")(options "")(descr ""))
-  (lib (name "BU18SD5WF_TL")(type "KiCad")(uri "/home/sdpr/Documents/Symboles_Kicad/BU18SD5WG_TL/BU18SD5WF_TL.pretty")(options "")(descr ""))
+  (lib (name "footprints")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/footprints.pretty")(options "")(descr ""))
 )
