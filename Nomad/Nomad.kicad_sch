@@ -4564,131 +4564,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3.3V"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3.3V"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3.3V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3.3V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -5316,12 +5191,6 @@
 		(uuid "5676283f-0bca-47df-9ecd-3cc112ed0793")
 	)
 	(junction
-		(at 113.03 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "61cab83f-2826-46b8-8c6e-cee480bde9fa")
-	)
-	(junction
 		(at 271.78 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5538,6 +5407,10 @@
 		(uuid "2195f19f-5f1e-4f32-acce-c4ea025de05a")
 	)
 	(no_connect
+		(at 26.67 102.87)
+		(uuid "2eb79ecf-f8b1-44ca-b09c-da219bd9c170")
+	)
+	(no_connect
 		(at 171.45 54.61)
 		(uuid "390681dd-8feb-48cf-8e0d-2f6022f07365")
 	)
@@ -5548,6 +5421,14 @@
 	(no_connect
 		(at 58.42 115.57)
 		(uuid "563411d1-eef1-4cd1-afd1-0c5eedb267db")
+	)
+	(no_connect
+		(at 26.67 107.95)
+		(uuid "7c96ddd8-26f2-495b-a41f-b8c0b69b072b")
+	)
+	(no_connect
+		(at 26.67 105.41)
+		(uuid "8df07588-7e9e-4e99-8197-1612d83f19eb")
 	)
 	(no_connect
 		(at 58.42 113.03)
@@ -9450,6 +9331,28 @@
 			)
 		)
 	)
+	(global_label "3.3V"
+		(shape input)
+		(at 113.03 125.73 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "821c6d01-99d2-44bd-8e20-0c54577dd55c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 113.03 118.6324 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "IRQZ"
 		(shape input)
 		(at 26.67 113.03 180)
@@ -9575,6 +9478,29 @@
 		(uuid "88da78ac-0ed4-43d7-8fa6-0b8bdcf3e830")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 161.8124 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "STBY"
+		(shape input)
+		(at 26.67 100.33 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify right)
+		)
+		(uuid "93ccad55-7284-44b4-96ef-c3fa42baf166")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.1491 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10348,7 +10274,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
 			(at 260.35 142.24 0)
 			(effects
 				(font
@@ -12500,72 +12426,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 113.03 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "613fa592-2d95-4075-9d55-11d5ef39a75d")
-		(property "Reference" "#PWR030"
-			(at 113.03 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 113.03 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 113.03 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 113.03 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7ea8e498-ffa5-49e3-8998-9e978ac1a3df")
-		)
-		(instances
-			(project "Nomad"
-				(path "/de034e9c-b8ea-4778-bb22-0d64fe014821"
-					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 223.52 41.91 90)
 		(unit 1)
@@ -13247,6 +13107,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 121.92 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7274ef8e-bda4-4f8d-b95c-513fbe235803")
+		(property "Reference" "#FLG06"
+			(at 121.92 123.825 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 121.92 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.92 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 121.92 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 121.92 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d9be8c2a-ffd1-4775-a167-ea6ee3c9fdcf")
+		)
+		(instances
+			(project "Nomad"
+				(path "/de034e9c-b8ea-4778-bb22-0d64fe014821"
+					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x04_Socket")
 		(at 96.52 63.5 0)
 		(unit 1)
@@ -13350,7 +13276,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
 			(at 260.35 132.08 0)
 			(effects
 				(font
@@ -13685,7 +13611,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
 			(at 260.35 137.16 0)
 			(effects
 				(font
@@ -13822,7 +13748,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
 			(at 260.35 147.32 0)
 			(effects
 				(font
