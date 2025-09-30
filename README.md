@@ -85,6 +85,15 @@ Planning prévisionnel :
 
 <img width="1354" height="362" alt="image" src="https://github.com/user-attachments/assets/6d0e3242-3ce1-4a6d-a6a6-cdb654a1a0d4" />
 
+## Séance 3 (30/09/2025)
+
+Simon, Gabriel : commande des composants, continuer le PCB
+
+Alexksander : ecrire un code pour teste l'intensité d'un signal wifi avec un appareil. On remarque que des interférences viennent rapidement perturber le signal. Il faudrait amplifier le signal wifi ou trouver un autre solution pour le localisation des robots.
+
+Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifier que le signal est bien lu sur l'esp32 avec un oscilloscope. Le son n'est pas assez puissant pour pouvoir l'écouter. Prochaine séance, essayer de diffuser le son avec un amplificateur et un haut-parleur.  
+
+Julie: conception mécanique du robot (modélisation Onshape)
 
 ## Ressources
 
