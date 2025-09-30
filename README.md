@@ -42,7 +42,8 @@ Cette partie correspond à la concéption et à la réalisation des amplificateu
 Cette partie comporte la programmation du microcontroleur (esp32), Rasberry PI, application mobile.
 On vise à traiter le son et assurer une communication synchrone entre le microcontrôleur maître et les amplis.
 Le traitement de signal sera géré par la Rasberry Pi commandé via une interface mobile. 
-
+La communication entre l'application du telephone et la raspberry pi se fera via le protocole MQTT.
+La diffusion de la musique entre la raspberry pi et l'esp32 se fera à travers le protocole Udp.
 
 ### Partie mécanique
 
