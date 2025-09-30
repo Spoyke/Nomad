@@ -1,0 +1,20 @@
+import socket
+import time
+from pydub import AudioSegment
+
+UDP_IP = "192.168.1.13"
+UDP_PORT = 12345
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# Convertir MP3 en PCM 8 bits mono
+audio = AudioSegment.from_mp3("Musique/Le Tour.mp3").set_channels(1).set_frame_rate(8000).set_sample_width(1)
+data = audio.raw_data
+
+chunk_size = 64  # plus petit pour éviter de saturer l'ESP32
+
+with open("audio_data.txt", "w") as f:
+    for i in range(0, len(data), chunk_size):
+        chunk = data[i:i+chunk_size]
+        sock.sendto(chunk, (UDP_IP, UDP_PORT))
+        f.write(' '.join(str(b) for b in chunk) + '\n')
+        time.sleep(0.002)  # petit délai pour laisser l'ESP32 traiter
