@@ -77,6 +77,10 @@ Transmission de son via une application mobile
 - Choix final de l'esp32 et des empreintes des composants pour le PCB. 
 - Début de la conception du PCB.
 
+"Axel, Aleks" :
+
+Design de l'interface de l'application
+Début de communication entre un esp32 et la raspberry Pi
 
 "Globale" :
 - Recherche sur la façon dont les robots se localiser et comment l'implémenter : On utilisera l'intensité du signal émit par la raspberry pi à l'esp32 pour déterminer la distance entre les deux (plus l'intensité est faible, plus la distance est grande)
@@ -91,7 +95,8 @@ Simon, Gabriel : commande des composants, continuer le PCB
 
 Alexksander : ecrire un code pour teste l'intensité d'un signal wifi avec un appareil. On remarque que des interférences viennent rapidement perturber le signal. Il faudrait amplifier le signal wifi ou trouver un autre solution pour le localisation des robots.
 
-Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifier que le signal est bien lu sur l'esp32 avec un oscilloscope. Le son n'est pas assez puissant pour pouvoir l'écouter. Prochaine séance, essayer de diffuser le son avec un amplificateur et un haut-parleur.  
+Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifier que le signal est bien lu sur l'esp32 avec un oscilloscope. Le son n'est pas assez puissant pour pouvoir l'écouter.Implémentation d'un système d'amplification du courant à la prochaine séance via le dac de l'esp32
+
 
 Julie: conception mécanique du robot (modélisation Onshape)
 
