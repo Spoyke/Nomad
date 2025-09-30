@@ -2,6 +2,7 @@
   (version 7)
   (lib (name "2025-09-19_12-33-54")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/Symbols/2025-09-19_12-33-54.kicad_sym")(options "")(descr ""))
   (lib (name "2025-09-19_12-39-26")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/Symbols/2025-09-19_12-39-26.kicad_sym")(options "")(descr ""))
-  (lib (name "ESP32-DEVKITC-32UE")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/Symbols/ESP32-DEVKITC-32UE.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-DEVKITC-32UE")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/Symbols/ESP32-DEVKITC-32UE.kicad_sym")(options "")(descr "")(disabled)(hidden))
   (lib (name "2025-09-18_16-15-58")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/Symbols/2025-09-18_16-15-58.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-S3-DEVKITC-1-N8R2")(type "KiCad")(uri "${KIPRJMOD}/KiCad Libraries/Symbols/ESP32-S3-DEVKITC-1-N8R2.kicad_sym")(options "")(descr ""))
 )
