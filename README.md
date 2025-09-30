@@ -92,7 +92,9 @@ Planning prévisionnel :
 
 ## Séance 3 (30/09/2025)
 
-Simon, Gabriel : commande des composants, continuer le PCB
+Simon : commande des composants, continuer le PCB
+
+Gabriel : Finition placement des composants pour le routage, routage des composants sauf pour l'esp32. 
 
 Alexksander : ecrire un code pour teste l'intensité d'un signal wifi avec un appareil. On remarque que des interférences viennent rapidement perturber le signal. Il faudrait amplifier le signal wifi ou trouver un autre solution pour le localisation des robots.
 
