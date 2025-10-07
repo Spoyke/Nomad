@@ -103,9 +103,9 @@ Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifie
 
 Julie: conception mécanique du robot (modélisation Onshape)
 
-## Séance 4 (07/10/2025à
+## Séance 4 (07/10/2025)
 
- Simon : commande de composants. Recherche pour le repère des distances entre les robots. 
+Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et reprérer les amplis dans l'espace. Utilisation de l'intensité du signal pour déterminer la distance entre la raspberry pi et les esp32. Et, les esp32 entre eux, en demendans au esp de transmettre un signal périodiquement pour permettre aux autres de déterminer la distance avec ce dernier. Dans le cas du projet de conférencier, le conférencier porte la raspberry pi et les esp32 se placent dans un rayon de 3m autour de ce dernier. Et, à une certaine distance (à déterminer) entre eux. Ainsi, chaque esp32 va essayer de rester à une distance de 3m du conférencier et suffisament espacé des autres esp32.
 
  Gabriel : Correction PCB
 
