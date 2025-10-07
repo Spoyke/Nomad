@@ -113,6 +113,8 @@ Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et 
 
  Julie : Conception méca 
 
+ Axel : Lecture du son reçue sur l'esp32 depuis la raspberry avec l'ampli audio LM386. Actuellement le son est de très mauvaise qualitée, mais reconnaisable, car il est diffusé par le DAC de l'esp32. Deux objectifs pour la prochaine séance : - essayer un autre DAC pour voir si la qualité est meilleurs et mise en place de l'application pour commencer le contrôle de la raspberry via le telephone.
+
 ## Ressources
 
 ### Lien utile
