@@ -96,7 +96,7 @@ Simon : commande des composants, continuer le PCB
 
 Gabriel : Finition placement des composants pour le routage, routage des composants sauf pour l'esp32. 
 
-Alexksander : ecrire un code pour teste l'intensité d'un signal wifi avec un appareil. On remarque que des interférences viennent rapidement perturber le signal. Il faudrait amplifier le signal wifi ou trouver un autre solution pour le localisation des robots.
+Aleksandar : ecrire un code pour teste l'intensité d'un signal wifi avec un appareil. On remarque que des interférences viennent rapidement perturber le signal. Il faudrait amplifier le signal wifi ou trouver un autre solution pour le localisation des robots.
 
 Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifier que le signal est bien lu sur l'esp32 avec un oscilloscope. Le son n'est pas assez puissant pour pouvoir l'écouter.Implémentation d'un système d'amplification du courant à la prochaine séance via le dac de l'esp32
 
