@@ -103,6 +103,16 @@ Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifie
 
 Julie: conception mécanique du robot (modélisation Onshape)
 
+## Séance 4 (07/10/2025à
+
+ Simon : commande de composants. Recherche pour le repère des distances entre les robots. 
+
+ Gabriel : Correction PCB
+
+ Aleks : 
+
+ Julie : Conception méca 
+
 ## Ressources
 
 ### Lien utile
