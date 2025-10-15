@@ -7078,6 +7078,16 @@
 	)
 	(wire
 		(pts
+			(xy 30.48 30.48) (xy 38.1 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90e78dd4-45bf-4b35-b4f4-fd5e50bf1768")
+	)
+	(wire
+		(pts
 			(xy 113.03 87.63) (xy 114.3 87.63)
 		)
 		(stroke
@@ -10479,74 +10489,6 @@
 			(project "Nomad"
 				(path "/de034e9c-b8ea-4778-bb22-0d64fe014821"
 					(reference "C22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 34.29 30.48 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "065cede6-39f1-4123-b0ea-a1fd4170787f")
-		(property "Reference" "JP1"
-			(at 32.766 34.29 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 34.544 42.672 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
-			(at 34.29 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 34.29 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Solder Jumper, 2-pole, open"
-			(at 34.29 30.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "44981c6b-e72a-454f-bf30-272895499cfb")
-		)
-		(pin "1"
-			(uuid "5ef4c8c4-1a9b-4a71-8eee-723d278ad745")
-		)
-		(instances
-			(project ""
-				(path "/de034e9c-b8ea-4778-bb22-0d64fe014821"
-					(reference "JP1")
 					(unit 1)
 				)
 			)
