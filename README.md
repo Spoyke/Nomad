@@ -115,6 +115,14 @@ Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et 
 
  Axel : Lecture du son reçue sur l'esp32 depuis la raspberry avec l'ampli audio LM386. Actuellement le son est de très mauvaise qualitée, mais reconnaisable, car il est diffusé par le DAC de l'esp32. Deux objectifs pour la prochaine séance : - essayer un autre DAC pour voir si la qualité est meilleurs et mise en place de l'application pour commencer le contrôle de la raspberry via le telephone.
 
+## Séance 5 (21/10/2025)
+
+Aleks : 
+Axel : Utilisation du LM386 mais peu fructueuse car il faut mettre un son de très faible amplitude ( ~= 50 mv max à cause du gain de 20 de l'ampli ), qui est presque impossible à avoir avec le DAC 8 bits de l'esp32. Test d'un ampli audio I2S pendant les vacances.
+Simon : 
+Gabriel : 
+Julie : 
+
 ## Ressources
 
 ### Lien utile
