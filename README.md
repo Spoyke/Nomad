@@ -118,9 +118,13 @@ Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et 
 ## Séance 5 (21/10/2025)
 
 Aleks : 
+
 Axel : Utilisation du LM386 mais peu fructueuse car il faut mettre un son de très faible amplitude ( ~= 50 mv max à cause du gain de 20 de l'ampli ), qui est presque impossible à avoir avec le DAC 8 bits de l'esp32. Test d'un ampli audio I2S pendant les vacances.
+
 Simon : 
+
 Gabriel : 
+
 Julie : 
 
 ## Ressources
