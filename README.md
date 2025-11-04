@@ -123,7 +123,7 @@ Axel : Utilisation du LM386 mais peu fructueuse car il faut mettre un son de tr�
 
 Simon : 
 
-Gabriel : 
+Gabriel : finalisation pcb, creation gerbers, envoi en production
 
 Julie : 
 
@@ -135,7 +135,7 @@ Axel : Sur mon réseau wifi à domicile, tout est ok niveau transmission de l'au
 
 Simon : 
 
-Gabriel : 
+Gabriel : verification avancement commande pcb, tests de fonctionnement capteur ultrasons, point sur la repartition des tâches avec le reste de l'equipe
 
 Julie : 
 
