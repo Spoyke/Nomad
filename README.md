@@ -127,6 +127,18 @@ Gabriel :
 
 Julie : 
 
+## Séance 6 (4/11/2025)
+
+Aleks : 
+
+Axel : Sur mon réseau wifi à domicile, tout est ok niveau transmission de l'audio et synchronisation. Arrivé à l'école, je me rends compte que le réseau de l'ecole bloque certains port d'écoute nécessaire à la partie informatique. Changement du partie du moyen de communication ( Mqtt -> serveur local WebSocket ).
+
+Simon : 
+
+Gabriel : 
+
+Julie : 
+
 ## Ressources
 
 ### Lien utile
