@@ -121,7 +121,7 @@ Aleks :
 
 Axel : Utilisation du LM386 mais peu fructueuse car il faut mettre un son de très faible amplitude ( ~= 50 mv max à cause du gain de 20 de l'ampli ), qui est presque impossible à avoir avec le DAC 8 bits de l'esp32. Test d'un ampli audio I2S pendant les vacances.
 
-Simon : 
+Simon : Début du travaille sur la synchronisation des ESP32 : La raspberry pi envoit des pacquets de données d'une taille à définir en fonction de la qualité du son et de la mémoire disponible sur l'esp32. Dans ce paquet, il y a 3 éléments : l'heure (nombre de microseconde depuis l'epoch) de la rasbperry pi lors de l'envoie du paquet, l'heure où le son doit être joué par l'esp32 et les données du son. De cette façon, la latence peut être estimer la latence qu'il y a eu en comparant l'heure de transmission et l'heure de l'esp32.  
 
 Gabriel : finalisation pcb, creation gerbers, envoi en production
 
@@ -133,7 +133,7 @@ Aleks :
 
 Axel : Sur mon réseau wifi à domicile, tout est ok niveau transmission de l'audio et synchronisation. Arrivé à l'école, je me rends compte que le réseau de l'ecole bloque certains port d'écoute nécessaire à la partie informatique. Changement du partie du moyen de communication ( Mqtt -> serveur local WebSocket ).
 
-Simon : 
+Simon : Mise en place de multithreading pour permettre à l'esp32 de réaliser ses tâches (réception, émission, déplacement et envoit du son à l'ampli audio) en parallèle. Et, travaille sur la synchronisation : mise en place d'une queue pour stocker les paquets reçuent et pas encore traités car la réception des données est plus rapide que le traitement des paquets. Une fois le traitement du paquet terminé, le code créé un timer qui se déclanchera dans (heure du son à jouer - heure raspberry pi).  
 
 Gabriel : verification avancement commande pcb, tests de fonctionnement capteur ultrasons, point sur la repartition des tâches avec le reste de l'equipe
 
