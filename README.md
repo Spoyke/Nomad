@@ -109,7 +109,7 @@ Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et 
 
  Gabriel : Correction PCB
 
- Aleks : 
+ Aleks : Correction du code pour l'intensité du signal wifi, manipulation entre deux ESP32 pour vérifier si l'un capte l'autre. On c'est procurer une antenne d'Arès que l'on a mis sur l'ESP32 ce qui a permis de corriger la perturbation des signaux et augmenter leur intensité à la réception de l'ESP32. Vérification de l'intensité du signal émis par un partage de connexion d'iphone en fonction de la distance
 
  Julie : Conception méca 
 
@@ -117,7 +117,7 @@ Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et 
 
 ## Séance 5 (21/10/2025)
 
-Aleks : 
+Aleks : Implémentation d'un système de connexion dans le code qui scan les signaux Wi-Fi aux alentours, a présent, il est possible de se connecter a un réseau Wi-Fi tant que l'ESP32 capte le signal et tant que l'on connait le mot de passe du wifi (falcutatif)
 
 Axel : Utilisation du LM386 mais peu fructueuse car il faut mettre un son de très faible amplitude ( ~= 50 mv max à cause du gain de 20 de l'ampli ), qui est presque impossible à avoir avec le DAC 8 bits de l'esp32. Test d'un ampli audio I2S pendant les vacances.
 
@@ -129,7 +129,7 @@ Julie :
 
 ## Séance 6 (4/11/2025)
 
-Aleks : 
+Aleks : Début de code sur la spatialisation des ESP32, le but sera d'estimer (pour l'instant de manière ni précise et plutôt naïve) la distance entre l'esp32 et la raspberry en fonction de l'intensité RSSI du signal wif.
 
 Axel : Sur mon réseau wifi à domicile, tout est ok niveau transmission de l'audio et synchronisation. Arrivé à l'école, je me rends compte que le réseau de l'ecole bloque certains port d'écoute nécessaire à la partie informatique. Changement du partie du moyen de communication ( Mqtt -> serveur local WebSocket ).
 
