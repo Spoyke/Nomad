@@ -5,6 +5,7 @@ import 'package:mqtt_client/mqtt_server_client.dart';
 import 'dart:convert';
 import 'dart:async';
 import 'classes.dart';
+import 'package:web_socket_channel/web_socket_channel.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +19,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final String url = 'ws://192.168.1.12:8765';
+  late WebSocketChannel _channel;
   MqttServerClient? _client;
   final String _broker = "test.mosquitto.org";
   final int _port = 1883;
@@ -42,51 +45,17 @@ class _MyAppState extends State<MyApp> {
       ? Image.memory(getCoverByName(track.title)!, width: 32, height: 32)
       : Icon(Icons.audiotrack, color: Colors.deepPurple);
 
-  Future<void> send(String msg) async {
-    if (_client?.connectionStatus?.state != MqttConnectionState.connected) {
-      debugPrint("Pas connecté au broker, pas d'envoi de msg");
-      return;
-    }
-    final builder = MqttClientPayloadBuilder();
-    builder.addString(msg);
-    _client?.publishMessage(_topicPub, MqttQos.exactlyOnce, builder.payload!);
-  }
-
-  void sendCommand(String command, [Map<String, dynamic>? data]) {
-    final payload = jsonEncode({"command": command, ...?data});
-    send(payload);
-  }
-
   @override
   void initState() {
     super.initState();
     trackList = [];
-    Future.delayed(Duration.zero, () async {
-      await connect();
-    });
+    WBconnect();
   }
 
   @override
   void dispose() {
     _timer?.cancel();
     super.dispose();
-  }
-
-  Future<void> connect() async {
-    _client = MqttServerClient(_broker, "flutter_client");
-    _client?.port = _port;
-    _client?.logging(on: false);
-    _client?.keepAlivePeriod = 60;
-    try {
-      await _client?.connect();
-      if (_client?.connectionStatus?.state == MqttConnectionState.connected) {
-        debugPrint("Connecté au broker MQTT avec succès !");
-      }
-      subscribeToTopic();
-      send(jsonEncode({"command": "start"}));
-    } catch (e) {
-      debugPrint("Erreur lors de la connexion : ${e.toString()}");
-    }
   }
 
   void _handleTrackListGetter(String content) async {
@@ -106,7 +75,7 @@ class _MyAppState extends State<MyApp> {
           precacheImage(NetworkImage(artist.imageUrl!), context);
         }
       }
-      send(jsonEncode({"command": "get_cover", "album": albumList.first.title}));
+      _sendWS("rPI", "get_cover", albumList.first.title);
     } catch (e) {
       debugPrint("Erreur parsing liste: $e");
     }
@@ -123,7 +92,7 @@ class _MyAppState extends State<MyApp> {
       indexAlbumToAsk++;
       if (indexAlbumToAsk < albumList.length) {
         debugPrint("Demande cover pour : ${albumList[indexAlbumToAsk].title}");
-        send(jsonEncode({"command": "get_cover", "album": albumList[indexAlbumToAsk].title}));
+        _sendWS("rPI", "get_cover", albumList[indexAlbumToAsk].title);
       } else {
         debugPrint("Toutes les covers ont été demandées");
       }
@@ -157,16 +126,89 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  void _togglePlayPause() {
-    setState(() {
-      _isPlaying = !_isPlaying;
-      if (_isPlaying) {
-        _startTimer();
-      } else {
-        _timer?.cancel();
-      }
-    });
+  void _sendWS(String target, String command, [String? content]) {
+    Map<String, String> msg = {};
+    msg['target'] = target;
+    msg['command'] = command;
+    if (content != null) msg['content'] = content;
+    _channel.sink.add(json.encode(msg));
   }
+
+  void WBconnect() async {
+    _channel = WebSocketChannel.connect(Uri.parse(url));
+    _sendWS('rPI', 'start');
+    _channel.stream.listen(
+      (message) async {
+        String command = jsonDecode(message)['command'];
+        switch (command) {
+          case "tracklist":
+            List data = jsonDecode(message)['content'];
+            setState(() {
+              trackList = data
+                  .map((e) => Track(title: e['title'], artist: e['artist'], duration: e['duration'], album: e['album']))
+                  .toList();
+              sortList(trackList);
+              buildAlbumList();
+            });
+            await buildArtistListWithImages(); // <-- télécharge aussi les images Deezer
+            for (final artist in artistList) {
+              if (artist.imageUrl != null) {
+                precacheImage(NetworkImage(artist.imageUrl!), context);
+              }
+            }
+            _sendWS("rPI", "get_cover", albumList.first.title);
+            break;
+          case "Album":
+            try {
+              String coverString = jsonDecode(message)['content'];
+              final Uint8List bytes = base64Decode(coverString);
+              setState(() {
+                albumList[indexAlbumToAsk].cover = bytes;
+              });
+
+              debugPrint("Cover reçue pour : ${albumList[indexAlbumToAsk].title}");
+              indexAlbumToAsk++;
+              if (indexAlbumToAsk < albumList.length) {
+                debugPrint("Demande cover pour : ${albumList[indexAlbumToAsk].title}");
+                _sendWS("rPI", "get_cover", albumList[indexAlbumToAsk].title);
+              } else {
+                debugPrint("Toutes les covers ont été demandées");
+              }
+            } catch (e) {
+              debugPrint("Erreur réception cover: $e");
+            }
+            break;
+        }
+      },
+      onDone: () {
+        debugPrint('Connexion fermée');
+      },
+      onError: (error) {
+        debugPrint('Erreur: $error');
+      },
+    );
+  }
+
+  void WBsendMessage(String message) {
+    final jsonMessage = jsonEncode({'message': message});
+    _channel.sink.add(jsonMessage);
+    print('Message envoyé: $jsonMessage');
+  }
+
+  void WBdisconnect() {
+    _channel.sink.close();
+  }
+
+  // void _togglePlayPause() {
+  //   setState(() {
+  //     _isPlaying = !_isPlaying;
+  //     if (_isPlaying) {
+  //       _startTimer();
+  //     } else {
+  //       _timer?.cancel();
+  //     }
+  //   });
+  // }
 
   void _startTimer() {
     _timer = Timer.periodic(Duration(seconds: 1), (timer) {
@@ -206,6 +248,8 @@ class _MyAppState extends State<MyApp> {
                       _currentPosition = 0;
                       _isPlaying = false;
                     });
+                    // print(_currentTrack.title);
+                    _sendWS("rPI", "play", _currentTrack.title);
                   },
                 ),
               );
@@ -229,7 +273,7 @@ class _MyAppState extends State<MyApp> {
               final album = albumList[index];
               return GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => MyWidget(cover: album.cover!)));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AlbumView(cover: album.cover!)));
                 },
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -321,6 +365,10 @@ class _MyAppState extends State<MyApp> {
           );
   }
 
+  void pause() {
+    _sendWS("rPI", "stop", "");
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -345,7 +393,7 @@ class _MyAppState extends State<MyApp> {
               IconButton(
                 icon: Icon(Icons.settings),
                 onPressed: () {
-                  send(jsonEncode({"command": "askJson"}));
+                  print("Appui sur le btn de réglage");
                 },
               ),
             ],
@@ -411,7 +459,7 @@ class _MyAppState extends State<MyApp> {
                               backgroundColor: Colors.deepPurple,
                               child: IconButton(
                                 icon: Icon(_isPlaying ? Icons.pause : Icons.play_arrow, color: Colors.white, size: 28),
-                                onPressed: _togglePlayPause,
+                                onPressed: pause,
                               ),
                             ),
                             SizedBox(width: 16),
@@ -457,7 +505,7 @@ class _MyAppState extends State<MyApp> {
                                               setState(() {
                                                 _currentSliderValue = value;
                                               });
-                                              send('{"command": "set_volume", "value": $value}');
+                                              _sendWS("rPI", "set_volume", "value");
                                             },
                                           ),
                                         ),

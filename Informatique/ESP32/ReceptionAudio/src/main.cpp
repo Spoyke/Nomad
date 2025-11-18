@@ -1,46 +1,140 @@
 #include <WiFi.h>
-#include <WiFiUdp.h>
-#include <Arduino.h>
+#include <HTTPClient.h>
+#include <Audio.h>
+#include <SPI.h>
+#include <SD.h>
+#include "time.h"
+#include "mqtt.h"
+#include "Arduino.h"
 
-#define Network 1
-#define FREQUENCE 8000
-#if Network == 1
-const char* ssid = "wifi-ensea";
-const char* password = "";
-#elif Network == 2 // Wifi Axel
-const char* ssid = "Livebox-AE90";
-const char* password = "qnrVTnqJk2odnwnupj";
+// ==============================
+// Configuration WiFi
+// ==============================
+#define NETWORK 3
+#if NETWORK == 1
+  const char* ssid = "wifi-ensea";
+  const char* password = "";
+#elif NETWORK == 2
+  const char* ssid = "Livebox-AE90";
+  const char* password = "qnrVTnqJk2odnwnupj";
+#elif NETWORK == 3
+  const char* ssid = "Nomad";
+  const char* password = "axel1234";
 #endif
 
+// ==============================
+// Configuration audio et NTP
+// ==============================
+const char* url = "http://10.30.192.117:8000/stream.mp3";
+const char* ntpServer = "pool.ntp.org";
+const long gmtOffset_sec = 3600;
+const int daylightOffset_sec = 3600;
 
-WiFiUDP udp;
-#define UDP_PORT 12345
-#define BUFFER_SIZE 128
-uint8_t buffer[BUFFER_SIZE];
+// --- Broches I2S ---
+#define SD_PIN 5
+#define I2S_BCLK 26
+#define I2S_LRC 25
+#define I2S_DOUT 22
 
+// ==============================
+// Objets globaux
+// ==============================
+Audio audio;
+bool ready = false;  // indique si l'ESP32 est prêt
+bool synced = false; // indique si la lecture a commencé
 
+// ==============================
+// Fonctions
+// ==============================
+
+void syncTime() {
+  Serial.println("Synchronisation NTP...");
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+
+  time_t now = time(nullptr);
+  // while (now < 1672531200) { // attend que le temps soit correct
+  //   delay(100);
+  //   now = time(nullptr);
+  //   Serial.print(".");
+  // }
+  Serial.println();
+
+  struct tm timeinfo;
+  getLocalTime(&timeinfo);
+  Serial.print("Heure locale : ");
+  Serial.println(&timeinfo, "%H:%M:%S");
+}
+
+void startAudio(const char* url) {
+  Serial.println("Connexion au flux audio...");
+  audio.connecttohost(url);
+  digitalWrite(SD_PIN, HIGH);
+  Serial.println("Lecture audio démarrée !");
+}
+
+void stopAudio() {
+  Serial.println("Arrêt du flux audio...");
+  audio.stopSong();
+  digitalWrite(SD_PIN, LOW);
+  synced = false;
+  Serial.println("Lecture arrêtée.");
+}
+
+// ==============================
+// Setup
+// ==============================
 void setup() {
-  Serial.begin(115200);// Désactive le DAC au démarrage
+  Serial.begin(115200);
+  pinMode(SD_PIN, OUTPUT);
+  digitalWrite(SD_PIN, LOW);
+
+  Serial.println("Connexion WiFi...");
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
   Serial.println("\nWiFi connecté !");
-  Serial.print("IP ESP32 : ");
   Serial.println(WiFi.localIP());
-  udp.begin(UDP_PORT);
-  dacWrite(25, 0);
+
+  audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
+  MqttInit();
+  Serial.println("En attente du message START...");
 }
 
+// ==============================
+// Loop
+// ==============================
 void loop() {
-  int packetSize = udp.parsePacket();
-  if (packetSize > 0) {
-    int len = udp.read(buffer, min(packetSize, BUFFER_SIZE));
-    for (int i = 0; i < len; i++) {
-      Serial.println(buffer[i]);
-      dacWrite(25, buffer[i]);  // envoie l'échantillon sur le DAC
-      delayMicroseconds(1000000 / FREQUENCE);
+  MqttLoop();
+  audio.loop();
+
+  String msg = mqttGetMessage();
+  if (msg != "") {
+    Serial.print("Message MQTT reçu : ");
+    Serial.println(msg);
+
+    if (msg == "START") {
+      Serial.println("Préparation...");
+      syncTime();  // on synchronise une seule fois ici
+      audio.setVolume(6);
+      ready = true;
+      mqttSend("READY");
     }
+
+    else if (msg == "Sync" && ready && !synced) {
+      Serial.println("Signal SYNC reçu → démarrage immédiat du son !");
+      startAudio(url);
+      synced = true;
+      mqttSend("PLAYING");
+    }
+
+    else if (msg == "STOP") {
+      Serial.println("Commande STOP reçue !");
+      stopAudio();
+      mqttSend("STOPPED");
+    }
+
+    mqttCleanMessage();
   }
 }

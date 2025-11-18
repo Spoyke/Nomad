@@ -94,26 +94,23 @@ def setTrackList(dossier):
     trackList = [] 
     folderContent = getFolderContent(dossier) 
     for file in folderContent: 
+        # Ignorer les fichiers qui ne sont pas des .mp3
+        if not file.lower().endswith('.mp3'):
+            continue
+        
         track = { 
             'fileName': file, 
-            'title': getTrackInfo(dossier, file,tagList['title']), 
+            'title': getTrackInfo(dossier, file, tagList['title']), 
             'duration': getMusicDuration(dossier, file), 
-            'artist': getTrackInfo(dossier, file,tagList['artist']), 
+            'artist': getTrackInfo(dossier, file, tagList['artist']), 
             'album': getTrackInfo(dossier, file, tagList['album ']), 
             'cover': getCompressedCoverBase64(dossier, file), 
             'trackNumber': getTrackInfo(dossier, file, tagList['trackNumber']),
-            } 
-        # print(f'filename : {track['fileName']}')
-        # print(f'title : {track['title']}')
-        # print(f'duration : {track['duration']}')
-        # print(f'artist : {track['artist']}')
-        # print(f'album : {track['album']}')
-        # print(f'trackNumber : {track['trackNumber']}')
-        trackList.append(track) 
+        } 
+        trackList.append(track)
 
 def getTrackList(dossier): 
     return json.dumps(trackList) 
-
 
 def afficherCover(chemin_dossier, fichier): 
     """Affiche la pochette compressée.""" 
@@ -124,6 +121,14 @@ def afficherCover(chemin_dossier, fichier):
         image.show() 
     else: 
         print("Aucune cover trouvée ou erreur de lecture.")
+
+def getFileNameFromTitle(titleName):
+    """Renvoie le nom du fichier correspondant au titre donné."""
+    for file in trackList:
+        if file["title"] and file["title"].lower() == titleName.lower():
+            return file["fileName"]
+    return None
+
 
 # afficherCover("Musique","Freeze Corleone - MW2.mp3")
 setTrackList(music_folder)

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mono_5fdownmix_105',['mono_downmix',['../class_a2_d_p_volume_control.html#a8b449f76c7c931cf590732a3d73acaea',1,'A2DPVolumeControl']]]
+  ['log_5ffree_5fheap_0',['log_free_heap',['../class_bluetooth_a2_d_p_common.html#a791432e5c800e75fb11b858071cff651',1,'BluetoothA2DPCommon']]],
+  ['logging_1',['Logging',['../index.html#autotoc_md14',1,'']]]
 ];

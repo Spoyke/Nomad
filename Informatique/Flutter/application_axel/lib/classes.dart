@@ -116,9 +116,9 @@ void sortList(List<dynamic> list) {
   list.sort((a, b) => a.title.toLowerCase().compareTo(b.title.toLowerCase()));
 }
 
-class MyWidget extends StatelessWidget {
+class AlbumView extends StatelessWidget {
   final Uint8List cover;
-  const MyWidget({super.key, required this.cover});
+  const AlbumView({super.key, required this.cover});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

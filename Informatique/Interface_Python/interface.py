@@ -1,16 +1,13 @@
 import paho.mqtt.client as mqtt
+import mqttClient
 import json
 import file
+import config
+import SoundDiffuser as sd
+import os
 
-# ==============================
-# Variables & Constantes
-# ==============================
-BROKER_ADDRESS = "test.mosquitto.org"
-BROKER_PORT = 1883
-TOPIC_SUB = "Nomad/command"
-TOPIC_PUB = "Nomad/receive"
-FOLDER = "Musique"
-volume = 15
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 # ==============================
 # Design Pattern Command
@@ -20,71 +17,76 @@ class Command:
         raise NotImplementedError
 
 class StartCommand(Command):
-    def execute(self,data):
-        tracklis = file.getTrackList(FOLDER)
-        MQTTClient().publish(f"1{tracklis}")
+    def execute(self, data):
+        tracklist = file.getTrackList(config.FOLDER)
+        mqttClient.MQTTClient().publish(config.TOPIC_PUB, f"1{tracklist}")
         print("Tracklist envoyée")
 
 class GetCoverCommand(Command):
-    def execute(self,data):
+    def execute(self, data):
         album_name = data.get("album")
         filename = file.getFileNameFromAlbum(album_name)
         if filename:
-            cover_b64 = file.getCompressedCoverBase64(FOLDER, filename)
+            cover_b64 = file.getCompressedCoverBase64(config.FOLDER, filename)
             if cover_b64:
-                MQTTClient().publish(f"2{cover_b64}")
+                mqttClient.MQTTClient().publish(config.TOPIC_PUB, f"2{cover_b64}")
                 print("Cover envoyée")
             else:
                 print("Aucune cover trouvée pour", filename)
-                MQTTClient().publish("2")
+                mqttClient.MQTTClient().publish(config.TOPIC_PUB, "2")
         else:
             print("Album introuvable :", album_name)
-            MQTTClient().publish("2")
+            mqttClient.MQTTClient().publish(config.TOPIC_PUB, "2")
 
 class SetVolumeCommand(Command):
     def execute(self, data):
         global volume
         volume = data.get("value", volume)
         print(f"Volume mis à jour : {volume}")
-        
+
+class Play(Command):
+    def execute(self, data):
+        music_name = data.get("Music")
+        if music_name:
+            filename = file.getFileNameFromTitle(music_name)
+            if filename:
+                global fichier_audio
+                fichier_audio = fr"Musique\{filename}"
+                sd.lancer_diffusion(fichier_audio)
+                mqttClient.MQTTClient().publish("Nomad/esp32/receive", "Sync")
+            else:
+                print(f"Titre introuvable dans la liste : {music_name}")
+        else:
+            print("Aucun titre reçu dans la commande 'play'.")
+
+class Stop(Command):
+    def execute(self, data):
+        mqttClient.MQTTClient().publish("Nomad/esp32/receive", "STOP")
+        sd.stopper_diffusion()
+
 # Registre des commandes
 commands = {
-    'start' : StartCommand(),
-    'get_cover' : GetCoverCommand()
+    'start': StartCommand(),
+    'get_cover': GetCoverCommand(),
+    'play': Play(),
+    'stop': Stop()
 }
 
 # ==============================
-# SINGLETON POUR CLIENT MQTT
-# ==============================
-class MQTTClient:
-    _instance = None
-
-    def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super().__new__(cls)
-            cls._instance.client = mqtt.Client()
-        return cls._instance
-
-    def connect(self):
-        self.client.on_connect = on_connect
-        self.client.on_message = on_message
-        self.client.connect(BROKER_ADDRESS, BROKER_PORT, 60)
-        print(f"Connecté au broker : {BROKER_ADDRESS}")
-        self.client.loop_forever()
-
-    def publish(self, msg):
-        self.client.publish(TOPIC_PUB, msg)
-
-# ==============================
-# Fonctions du MQTT
+# Fonctions MQTT
 # ==============================
 def on_connect(client, userdata, flags, rc):
-    client.subscribe(TOPIC_SUB)
-    print(f"Abonné au topic : {TOPIC_SUB}")
+    if rc == 0:
+        print(f"Connecté au broker avec code {rc}")
+        client.subscribe(config.TOPIC_SUB)
+        print(f"Abonné au topic : {config.TOPIC_SUB}")
+    else:
+        print(f"Échec de connexion MQTT, code : {rc}")
 
 def on_message(client, userdata, msg):
     try:
-        payload = msg.payload.decode()
+        payload = msg.payload.decode("latin-1")
+        clear_terminal()
         print(f"Message reçu sur {msg.topic} : {payload}")
         data = json.loads(payload)
 
@@ -100,8 +102,9 @@ def on_message(client, userdata, msg):
         print("Erreur lors du traitement du message :", e)
 
 # ==============================
-# POINT D’ENTRÉE
+# Point d’entrée
 # ==============================
 if __name__ == "__main__":
-    mqtt_client = MQTTClient()
-    mqtt_client.connect()
+    mqtt_client_instance = mqttClient.MQTTClient()
+    mqtt_client_instance.set_callbacks(on_connect, on_message)
+    mqtt_client_instance.start_loop()
