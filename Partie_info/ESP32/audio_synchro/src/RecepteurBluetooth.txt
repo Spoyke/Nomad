@@ -1,0 +1,56 @@
+#include <Arduino.h>
+#include "BluetoothA2DPSink.h"
+#include "../driver/include/driver/i2s.h"
+
+/* Audio */
+#define SAMPLE_RATE 44100  // Bluetooth envoie du 44.1 kHz
+#define I2S_BCLK 26
+#define I2S_LRC 25
+#define I2S_DOUT 22
+
+BluetoothA2DPSink a2dp_sink;
+
+void setupI2S() {
+  i2s_config_t i2s_config = {
+    .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_TX),
+    .sample_rate = SAMPLE_RATE,
+    .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,
+    .channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT,  // stéréo
+    .communication_format = I2S_COMM_FORMAT_STAND_I2S,
+    .intr_alloc_flags = 0,
+    .dma_buf_count = 8,
+    .dma_buf_len = 64,
+    .use_apll = false,
+    .tx_desc_auto_clear = true,
+    .fixed_mclk = 0
+  };
+
+  i2s_pin_config_t pin_config = {
+    .bck_io_num = I2S_BCLK,
+    .ws_io_num = I2S_LRC,
+    .data_out_num = I2S_DOUT,
+    .data_in_num = I2S_PIN_NO_CHANGE
+  };
+
+  // Installation du driver I2S
+  i2s_driver_install(I2S_NUM_0, &i2s_config, 0, NULL);
+  i2s_set_pin(I2S_NUM_0, &pin_config);
+  i2s_set_sample_rates(I2S_NUM_0, SAMPLE_RATE);
+}
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("Initialisation Bluetooth I2S...");
+
+  setupI2S();
+
+  // Démarrage du Bluetooth avec configuration I2S personnalisée
+  a2dp_sink.set_i2s_port(I2S_NUM_0);
+  a2dp_sink.start("ESP32 Audio"); // Nom Bluetooth affiché sur ton téléphone
+
+  Serial.println("ESP32 prêt — connecte-toi via Bluetooth !");
+}
+
+void loop() {
+  // Rien à faire ici, tout se passe via les callbacks internes de la lib
+}
