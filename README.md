@@ -139,6 +139,10 @@ Gabriel : verification avancement commande pcb, tests de fonctionnement capteur 
 
 Julie : Impression du premier prototypage du boîtier d'ampli audio. Tester l'ultrason et les moteurs pour la prochaine séance. Il faut aussi commander les moteurs, les esp32, les haut parleurs et les batteries pour la prochaine séance. 
 
+## Séance 7 (19/11/2025)
+
+Gabriel : Entretien sur fiche de compétances, recherche composants pour soudure pcb, reflexion à des solutions aux problèmes d'empruntes de composants 
+
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="670" height="558" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
