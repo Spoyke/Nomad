@@ -143,6 +143,8 @@ Julie : Impression du premier prototypage du boîtier d'ampli audio. Tester l'ul
 
 Gabriel : Entretien sur fiche de compétances, recherche composants pour soudure pcb, reflexion à des solutions aux problèmes d'empruntes de composants 
 
+Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
+
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="670" height="558" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
