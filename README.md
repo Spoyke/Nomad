@@ -143,6 +143,8 @@ Julie : Impression du premier prototypage du boîtier d'ampli audio. Tester l'ul
 
 Gabriel : Entretien sur fiche de compétances, recherche composants pour soudure pcb, reflexion à des solutions aux problèmes d'empruntes de composants 
 
+Simon et Aleks : Travail sur la mesure de la distance entre les esp32 pour qu'ils puissent rester à une certaine distance les uns des autres. La première idée, d'utilisé le RSSI comme avec la raspberry pi ne fonctionne pas. La communication n'est pas direct, elle passe par la raspberry pi. Une solution serait d'utiliser ESP-Now pour communiquer directement entre les esp32 mais, cela signifierait de devori couper la communication wifi avec la raspberry pi quelque temps pour émettre un signal capté par les autres esp32.
+
 Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
 
 Point sur la solution technique du déplacement et la répartition des tâches: 
