@@ -151,6 +151,7 @@ Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
 
 Axel : Le son est maintenant stéréo. Prochaine étape : enregistrement et diffusion de la voix via un micro I2S
 
+Simon Et Aleks : On a fait fonctionner le capteur à ultrason pour détecter les obstabcles sur la routes des amplis. Et, on a commencé travaillé sur le fonctionnement des moteurs.
 
 
 Point sur la solution technique du déplacement et la répartition des tâches: 
