@@ -147,6 +147,12 @@ Simon et Aleks : Travail sur la mesure de la distance entre les esp32 pour qu'il
 
 Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
 
+## Séance 7 (25/11/2025)
+
+Axel : Le son est maintenant stéréo. Prochaine étape : enregistrement et diffusion de la voix via un micro I2S
+
+
+
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="670" height="558" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
