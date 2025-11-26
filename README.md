@@ -147,11 +147,13 @@ Simon et Aleks : Travail sur la mesure de la distance entre les esp32 pour qu'il
 
 Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
 
-## Séance 7 (25/11/2025)
+## Séance 8 (25/11/2025)
 
 Axel : Le son est maintenant stéréo. Prochaine étape : enregistrement et diffusion de la voix via un micro I2S
 
 Simon Et Aleks : On a fait fonctionner le capteur à ultrason pour détecter les obstabcles sur la routes des amplis. Et, on a commencé travaillé sur le fonctionnement des moteurs.
+
+Gabriel : Soudure des composants qui n'avaient pas les bonnes empruntes. Reflexion sur la prochaine version du pcb
 
 
 Point sur la solution technique du déplacement et la répartition des tâches: 
