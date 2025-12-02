@@ -134,7 +134,7 @@ Aleks : Début de code sur la spatialisation des ESP32, le but sera d'estimer (p
 Axel : Sur mon réseau wifi à domicile, tout est ok niveau transmission de l'audio et synchronisation. Arrivé à l'école, je me rends compte que le réseau de l'ecole bloque certains port d'écoute nécessaire à la partie informatique. Changement du partie du moyen de communication ( Mqtt -> serveur local WebSocket ).
 
 Simon : Mise en place de multithreading pour permettre à l'esp32 de réaliser ses tâches (réception, émission, déplacement et envoit du son à l'ampli audio) en parallèle. Et, travaille sur la synchronisation : mise en place d'une queue pour stocker les paquets reçuent et pas encore traités car la réception des données est plus rapide que le traitement des paquets. Une fois le traitement du paquet terminé, le code créé un timer qui se déclanchera dans (heure du son à jouer - heure raspberry pi).  
-
+ 
 Gabriel : verification avancement commande pcb, tests de fonctionnement capteur ultrasons, point sur la repartition des tâches avec le reste de l'equipe
 
 Julie : Impression du premier prototypage du boîtier d'ampli audio. Tester l'ultrason et les moteurs pour la prochaine séance. Il faut aussi commander les moteurs, les esp32, les haut parleurs et les batteries pour la prochaine séance. 
@@ -156,6 +156,10 @@ Axel : Le son est maintenant stéréo. Prochaine étape : enregistrement et diff
 Simon Et Aleks : On a fait fonctionner le capteur à ultrason pour détecter les obstabcles sur la routes des amplis. Et, on a commencé travaillé sur le fonctionnement des moteurs.
 
 Gabriel et Julie : Soudure des composants qui n'avaient pas les bonnes empruntes. Reflexion sur la prochaine version du pcb
+
+## Séance 9 (02/12/2025)
+
+Gabriel : Test du fonctionnement des composants et du fonctionnent général de la carte. applications solutions des problèmes de composants.
 
 
 Point sur la solution technique du déplacement et la répartition des tâches: 
