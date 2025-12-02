@@ -143,6 +143,8 @@ Julie : Impression du premier prototypage du boîtier d'ampli audio. Tester l'ul
 
 Gabriel : Entretien sur fiche de compétances, recherche composants pour soudure pcb, reflexion à des solutions aux problèmes d'empruntes de composants 
 
+Julie : Soudure des composants
+
 Simon et Aleks : Travail sur la mesure de la distance entre les esp32 pour qu'ils puissent rester à une certaine distance les uns des autres. La première idée, d'utilisé le RSSI comme avec la raspberry pi ne fonctionne pas. La communication n'est pas direct, elle passe par la raspberry pi. Une solution serait d'utiliser ESP-Now pour communiquer directement entre les esp32 mais, cela signifierait de devori couper la communication wifi avec la raspberry pi quelque temps pour émettre un signal capté par les autres esp32.
 
 Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
@@ -153,7 +155,7 @@ Axel : Le son est maintenant stéréo. Prochaine étape : enregistrement et diff
 
 Simon Et Aleks : On a fait fonctionner le capteur à ultrason pour détecter les obstabcles sur la routes des amplis. Et, on a commencé travaillé sur le fonctionnement des moteurs.
 
-Gabriel : Soudure des composants qui n'avaient pas les bonnes empruntes. Reflexion sur la prochaine version du pcb
+Gabriel et Julie : Soudure des composants qui n'avaient pas les bonnes empruntes. Reflexion sur la prochaine version du pcb
 
 
 Point sur la solution technique du déplacement et la répartition des tâches: 
