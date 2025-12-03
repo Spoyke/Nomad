@@ -163,6 +163,8 @@ Gabriel : Test du fonctionnement des composants et du fonctionnent général de 
 
 Simon : Test du PCB, la diode de schotky protégeant le circuit bloque la tension d'alimentation de 12V. Il y a des étincelles lorsqu'on branche le 12 d'une alim de labo à la carte. Le LDO ne fonctionne pas, il ne sort pas de 5V, le problème peut venir des soudures qui sont moins bonnes à cette endroit. Le LDO transformant le 5V en 3.3V fonctionne mais chauffe beaucoup, il n'y a peut être pas de problème, le drive moteur peut demander beaucoup de courant, ce qui fait chauffer le composant mais, il faudra réfléchir à un moyen de réduire la chaleur du composant dans le prochain PCB. Les Leds indiquant qu'il y a du 12V et du 1.8V ne fonctionnent pas (composant déféctueux ?). On a commencé à câbler la partie amplification avec l'esp32 mais il faut adapter le code pour pouvoir contrôler le composant.  
 
+Axel : Test du micro I2S pas concluant => prochaine solutions : utilisation du micro du telephone
+
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="700" height="600" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
