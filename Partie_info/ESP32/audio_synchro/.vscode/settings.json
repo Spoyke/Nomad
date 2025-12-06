@@ -1,7 +1,3 @@
 {
-    "C_Cpp.errorSquiggles": "disabled",
-    "files.associations": {
-        "cstring": "cpp",
-        "typeinfo": "cpp"
-    }
+    "cmake.ignoreCMakeListsMissing": true
 }

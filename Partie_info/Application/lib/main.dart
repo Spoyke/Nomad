@@ -8,6 +8,9 @@ import 'track.dart';
 import 'artist.dart';
 import 'album.dart';
 import 'utility.dart';
+import 'package:flutter/foundation.dart';
+import 'package:icecast_flutter/icecast_flutter.dart';
+import 'package:record/record.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,19 +24,21 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  bool isStreaming = false;
+  late AudioRecorder record;
+  late StreamController<List<int>> outputStream;
+  late final IcecastFlutter _icecastFlutterPlugin;
+  final int bitRate = 128;
+  final int sampleRate = 44100;
+  final int numChannels = 2;
+
   String url = 'ws://10.42.0.1:8765';
   late WebSocketChannel _channel;
   double _currentSliderValue = 6;
   double _currentPosition = 0.0;
   bool _isPlaying = false;
   Timer? _timer;
-  Track _currentTrack = Track(
-    duration: 0,
-    title: "Aucune musique sélectionnée",
-    artist: "",
-    album: "",
-    // trackNumber: 1
-  );
+  Track _currentTrack = Track(duration: 0, title: "Aucune musique sélectionnée", artist: "", album: "");
 
   Widget _getCoverAlbum(Track track) {
     return getCoverByName(track.title) != null
@@ -137,9 +142,7 @@ class _MyAppState extends State<MyApp> {
   void _onDisconnected() {
     _timer?.cancel(); // Arrêter le minuteur de lecture
     setState(() {
-      // Mettre à jour l'état pour refléter la déconnexion dans l'UI
       _isPlaying = false;
-      // Optionnel : Réinitialiser la piste pour indiquer un état d'arrêt
       _currentTrack = Track(duration: 1, title: "DÉCONNECTÉ - Veuillez vérifier votre réseau.", artist: "", album: "");
       _currentPosition = 0;
     });
