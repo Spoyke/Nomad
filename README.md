@@ -168,7 +168,9 @@ Axel : Test du micro I2S pas concluant => prochaine solutions : utilisation du m
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="700" height="600" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
+## Séance 10 (09/12/2025)
 
+Axel : Test du micro I2S enfin concluant, possibilité de le lire sur le pc, il faut maintenant l'envoyer sur le serveur icecast
 
 ## Ressources
 
