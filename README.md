@@ -172,6 +172,8 @@ Point sur la solution technique du déplacement et la répartition des tâches:
 
 Axel : Test du micro I2S enfin concluant, possibilité de le lire sur le pc, il faut maintenant l'envoyer sur le serveur icecast
 
+Gabriel : Répartition des composants sur 3 cartes differentes avec Simon, création projets kicad pour les prochains pcbs, schéma elec carte commande, recherche empruntes et symboles pour composants.
+
 ## Ressources
 
 ### Lien utile
