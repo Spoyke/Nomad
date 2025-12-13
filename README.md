@@ -180,6 +180,8 @@ Simon : Travail sur le schéma du PCB de la partie audio, vérification des calc
 
 ### Lien utile
 
+Diapo : https://docs.google.com/presentation/d/1eaNsvsmn-reTe-8X8-2-HZ8j_HwDIsKxUu0F8LIjo8Q/edit?usp=sharing
+
 https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0
 
 ### RSE
