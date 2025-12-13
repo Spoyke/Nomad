@@ -174,6 +174,8 @@ Axel : Test du micro I2S enfin concluant, possibilité de le lire sur le pc, il 
 
 Gabriel : Répartition des composants sur 3 cartes differentes avec Simon, création projets kicad pour les prochains pcbs, schéma elec carte commande, recherche empruntes et symboles pour composants.
 
+Simon : Travail sur le schéma du PCB de la partie audio, vérification des calculs, du choix et du placments des composants. Tout est bon, le plus gros changement par rapport à la version antérieur est le fait d'utiliser le PWR_MODE1 de l'ampli qui lorsque l'amplification est faible, l'ampli tire son alimentation depuis une source externe plus faible (qui vient du buck) pour moins consommer. Cependant, il faut vérifier que le courant fournit par le buck peut supporter cet ajout et s'il peut le faire sans problème (chauffe etc...). Réflexion sur le déplacment des robots, j'ai trouvé une façon qui même si elle est peu précise devrait suffire pour l'application, sans ajouter de nouveau composant : le robot cherche à se mettre à une certaine distance de la raspberry pi avec le calcul de distance basé sur le RSSI du signal reçu. Et, avec les deux capteurs à ultrasons, le robot cherche à se mettre à une certaine distance des autres robots (les capteurs à ultrasons ayant une porté de 4m). On peut donc faire en sorte que les robots soit à bonne distance de la raspberry pi et les uns des autres pour fournir un son sur une large zone, ce qui est le but du conférencier.  
+
 ## Ressources
 
 ### Lien utile
