@@ -165,6 +165,8 @@ Simon : Test du PCB, la diode de schotky protégeant le circuit bloque la tensio
 
 Axel : Test du micro I2S pas concluant => prochaine solutions : utilisation du micro du telephone
 
+Aleks : Début de recherche et de programmation pour le mouvement des moteurs
+
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="700" height="600" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
@@ -175,6 +177,8 @@ Axel : Test du micro I2S enfin concluant, possibilité de le lire sur le pc, il 
 Gabriel : Répartition des composants sur 3 cartes differentes avec Simon, création projets kicad pour les prochains pcbs, schéma elec carte commande, recherche empruntes et symboles pour composants.
 
 Simon : Travail sur le schéma du PCB de la partie audio, vérification des calculs, du choix et du placments des composants. Tout est bon, le plus gros changement par rapport à la version antérieur est le fait d'utiliser le PWR_MODE1 de l'ampli qui lorsque l'amplification est faible, l'ampli tire son alimentation depuis une source externe plus faible (qui vient du buck) pour moins consommer. Cependant, il faut vérifier que le courant fournit par le buck peut supporter cet ajout et s'il peut le faire sans problème (chauffe etc...). Réflexion sur le déplacment des robots, j'ai trouvé une façon qui même si elle est peu précise devrait suffire pour l'application, sans ajouter de nouveau composant : le robot cherche à se mettre à une certaine distance de la raspberry pi avec le calcul de distance basé sur le RSSI du signal reçu. Et, avec les deux capteurs à ultrasons, le robot cherche à se mettre à une certaine distance des autres robots (les capteurs à ultrasons ayant une porté de 4m). On peut donc faire en sorte que les robots soit à bonne distance de la raspberry pi et les uns des autres pour fournir un son sur une large zone, ce qui est le but du conférencier.  
+
+Aleks : Continuation de la programmation du mouvement des moteurs, pour le moment rien de concret
 
 ## Ressources
 
