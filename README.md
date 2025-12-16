@@ -180,6 +180,11 @@ Simon : Travail sur le schéma du PCB de la partie audio, vérification des calc
 
 Aleks : Continuation de la programmation du mouvement des moteurs, mesure et estimation de la distance entre l'esp32 et la raspberry PI avec le RSSI
 
+
+## Séance 11 (16/12/2025)
+
+Aleks : Estimation de la distance entre esp32 et Raspberry PI faite, code du MotorDriver (TB6612FNG) terminé (en théorie). Objectif de la prochaine séance : codé un encodeur et les moteurs en eux-même.
+
 ## Ressources
 
 ### Lien utile
