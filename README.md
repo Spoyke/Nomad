@@ -43,7 +43,7 @@ Cette partie comporte la programmation des microcontroleurs (esp32), Rasberry PI
 On vise à traiter le son et assurer une communication synchrone entre le microcontrôleur maître et les amplis.
 - Le traitement de signal sera géré par la Rasberry Pi commandé via une interface mobile. 
 - La communication entre l'application du telephone et la raspberry pi se fera via un serveur local WebSocket hebergé par la raspberry.
-- La diffusion de la musique entre la raspberry pi et l'esp32 se fera à travers un autre serveur local WebSocket hebergé par la raspberry.
+- La diffusion de la musique entre la raspberry pi et l'esp32 se fera à travers un serveur local Icecast hebergé par la raspberry.
 
 ### Partie mécanique
 
