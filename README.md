@@ -185,6 +185,8 @@ Aleks : Continuation de la programmation du mouvement des moteurs, mesure et est
 
 Aleks : Estimation de la distance entre esp32 et Raspberry PI faite, code du MotorDriver (TB6612FNG) terminé (en théorie). Objectif de la prochaine séance : codé un encodeur et les moteurs en eux-même.
 
+Simon : Réalisation du PCB de la partie audio qui est presque terminé, mais il faudra attendre la prochaine séance pour envoyer la commande et être sûr qu'il puisse être utilisé avec les autres modules du robot (connecteurs aux bons endroits et dont la connexion entre les autres PCB n'est pas géné par les composants. J'ai aussi fait un bilan du courant consommé par le robot et je me suis rendu compte que le buck ne pourrait pas fournir un courant suffisant lorsque tous les composants fonctionnent au maximum (ce qui devrait être assez rare). On a donc décidé avec Gabriel d'utiliser deux buck (soit le buck actuelle qui sera utilisé jusqu'à ce qu'on le remplace par un autre buck plus puissant à un endroit prévu. Soit on utilise deux fois le même buck mais un des deux serait décdié au fonctionnement de l'ampli.).  
+
 ## Ressources
 
 ### Lien utile
