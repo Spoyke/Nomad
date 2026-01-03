@@ -125,8 +125,6 @@ Simon : Début du travaille sur la synchronisation des ESP32 : La raspberry pi e
 
 Gabriel : finalisation pcb, creation gerbers, envoi en production
 
-Julie : 
-
 ## Séance 6 (4/11/2025)
 
 Aleks : Début de code sur la spatialisation des ESP32, le but sera d'estimer (pour l'instant de manière ni précise et plutôt naïve) la distance entre l'esp32 et la raspberry en fonction de l'intensité RSSI du signal wif.
