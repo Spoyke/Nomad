@@ -43,7 +43,7 @@ Cette partie comporte la programmation des microcontroleurs (esp32), Rasberry PI
 On vise à traiter le son et assurer une communication synchrone entre le microcontrôleur maître et les amplis.
 - Le traitement de signal sera géré par la Rasberry Pi commandé via une interface mobile. 
 - La communication entre l'application du telephone et la raspberry pi se fera via un serveur local WebSocket hebergé par la raspberry.
-- La diffusion de la musique entre la raspberry pi et l'esp32 se fera à travers un autre serveur local WebSocket hebergé par la raspberry.
+- La diffusion de la musique entre la raspberry pi et l'esp32 se fera à travers un serveur local Icecast hebergé par la raspberry.
 
 ### Partie mécanique
 
@@ -125,8 +125,6 @@ Simon : Début du travaille sur la synchronisation des ESP32 : La raspberry pi e
 
 Gabriel : finalisation pcb, creation gerbers, envoi en production
 
-Julie : 
-
 ## Séance 6 (4/11/2025)
 
 Aleks : Début de code sur la spatialisation des ESP32, le but sera d'estimer (pour l'instant de manière ni précise et plutôt naïve) la distance entre l'esp32 et la raspberry en fonction de l'intensité RSSI du signal wif.
@@ -180,13 +178,23 @@ Simon : Travail sur le schéma du PCB de la partie audio, vérification des calc
 
 Aleks : Continuation de la programmation du mouvement des moteurs, mesure et estimation de la distance entre l'esp32 et la raspberry PI avec le RSSI
 
+
+## Séance 11 (16/12/2025)
+
+Aleks : Estimation de la distance entre esp32 et Raspberry PI faite, code du MotorDriver (TB6612FNG) terminé (en théorie). Objectif de la prochaine séance : codé un encodeur et les moteurs en eux-même.
+
+Simon : Réalisation du PCB de la partie audio qui est presque terminé, mais il faudra attendre la prochaine séance pour envoyer la commande et être sûr qu'il puisse être utilisé avec les autres modules du robot (connecteurs aux bons endroits et dont la connexion entre les autres PCB n'est pas géné par les composants. J'ai aussi fait un bilan du courant consommé par le robot et je me suis rendu compte que le buck ne pourrait pas fournir un courant suffisant lorsque tous les composants fonctionnent au maximum (ce qui devrait être assez rare). On a donc décidé avec Gabriel d'utiliser deux buck (soit le buck actuelle qui sera utilisé jusqu'à ce qu'on le remplace par un autre buck plus puissant à un endroit prévu. Soit on utilise deux fois le même buck mais un des deux serait décdié au fonctionnement de l'ampli.).  
+
 ## Ressources
 
-### Lien utile
+### Lien utiles
 
 Diapo : https://docs.google.com/presentation/d/1eaNsvsmn-reTe-8X8-2-HZ8j_HwDIsKxUu0F8LIjo8Q/edit?usp=sharing
+Rapport : https://docs.google.com/document/d/1yTh4eJWGzI2o9GAGtWadODZ8SpGP1pLww7qxfcwqxjY/edit?usp=sharing
 
 https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0
+
+Infos MPU6050 https://docs.google.com/document/d/1O3AgjvM2_tZX7ABNkbS3lNtyRqeFLNvJ6qVK9URJxNs/edit?usp=sharing
 
 ### RSE
 
