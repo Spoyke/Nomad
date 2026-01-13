@@ -2391,8 +2391,8 @@
 		(uuid 950da54f-2c37-4180-9f1f-7eedd7fd349a)
 	)
 	(rectangle
-		(start 218.44 86.36)
-		(end 281.94 165.1)
+		(start 218.44 87.63)
+		(end 281.94 166.37)
 		(stroke
 			(width 0)
 			(type default)
@@ -2500,7 +2500,7 @@
 	)
 	(text_box "Driver moteur"
 		(exclude_from_sim no)
-		(at 20.32 17.78 0)
+		(at 21.59 17.78 0)
 		(size 78.74 78.74)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
