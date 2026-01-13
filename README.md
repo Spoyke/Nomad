@@ -198,3 +198,7 @@ Infos MPU6050 https://docs.google.com/document/d/1O3AgjvM2_tZX7ABNkbS3lNtyRqeFLN
 
 ### RSE
 
+### Planning prévisionnel du 2nd semestre
+
+https://calendar.google.com/calendar/ical/73473c3522efe55f20496e4b81c19aa0aaffa0a2a7005d1d658da9e635591a50%40group.calendar.google.com/public/basic.ics
+
