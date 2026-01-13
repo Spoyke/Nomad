@@ -195,6 +195,8 @@ Simon : Mise au propre du planning prévisionnel sur Google Agenda (lien tout en
 
 Gabriel : Finitions schéma elec carte CMD, début routage carte CMD, verification routage partie audio
 
+Axel : Début d'utilisation et de diffusion du son du micro sur un esp32.
+
 ## Ressources
 
 ### Lien utiles
