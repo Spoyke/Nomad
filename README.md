@@ -193,6 +193,8 @@ Aleks : début de la partie cartographie en expérimentant des capteurs dont le 
 
 Simon : Mise au propre du planning prévisionnel sur Google Agenda (lien tout en bas). Fin du routage de la partie audio.
 
+Gabriel : Finitions schéma elec carte CMD, début routage carte CMD, verification routage partie audio
+
 ## Ressources
 
 ### Lien utiles
