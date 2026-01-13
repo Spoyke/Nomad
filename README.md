@@ -191,6 +191,8 @@ Tout le monde : Mise en accord sur le planning prévisionnel
 
 Aleks : début de la partie cartographie en expérimentant des capteurs dont le fonctionnement est similaire à un Lidar à l'aide d'une librairie Arduino, pour le moment pas de résultat concret à cause de certaine erreur lié a la partie programmation et au branchement des PINs
 
+Simon : Mise au propre du planning prévisionnel sur Google Agenda (lien tout en bas). Fin du routage de la partie audio.
+
 ## Ressources
 
 ### Lien utiles
