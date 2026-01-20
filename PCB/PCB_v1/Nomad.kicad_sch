@@ -2908,8 +2908,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 11.43 17.78 0)
+			(property "Reference" "Driver1"
+				(at 9.8141 -22.86 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2918,7 +2918,7 @@
 				)
 			)
 			(property "Value" "TB6612FNG"
-				(at 11.43 15.24 0)
+				(at 9.8141 -25.4 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3186,7 +3186,6 @@
 				(pin passive line
 					(at 2.54 -25.4 90)
 					(length 5.08)
-					(hide yes)
 					(name "PGND1"
 						(effects
 							(font
@@ -3241,7 +3240,6 @@
 				(pin passive line
 					(at 7.62 -25.4 90)
 					(length 5.08)
-					(hide yes)
 					(name "PGND2"
 						(effects
 							(font
@@ -5818,16 +5816,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 185.42) (xy 140.97 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "000433b1-fe5e-494c-865d-5a4095838549")
-	)
-	(wire
-		(pts
 			(xy 271.78 35.56) (xy 274.32 35.56)
 		)
 		(stroke
@@ -6798,16 +6786,6 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 184.15) (xy 143.51 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b709bb4-b523-4c76-b6c2-174fc4acdd97")
-	)
-	(wire
-		(pts
 			(xy 46.99 34.29) (xy 46.99 35.56)
 		)
 		(stroke
@@ -6985,6 +6963,16 @@
 			(type default)
 		)
 		(uuid "831876ab-cee4-4f2a-b86f-5bcf62c4bfe6")
+	)
+	(wire
+		(pts
+			(xy 140.97 185.42) (xy 138.43 185.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83809a9c-a180-49b7-814e-eb633412a9f9")
 	)
 	(wire
 		(pts
@@ -7618,16 +7606,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 184.15) (xy 138.43 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ccb5f8fe-4252-4822-a8ef-3d590a2daafc")
-	)
-	(wire
-		(pts
 			(xy 72.39 41.91) (xy 72.39 43.18)
 		)
 		(stroke
@@ -7695,6 +7673,16 @@
 			(type default)
 		)
 		(uuid "d4d7eaaf-7226-4380-a3ac-6d119c48445a")
+	)
+	(wire
+		(pts
+			(xy 143.51 185.42) (xy 143.51 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5e77f6a-f643-47a4-b719-e6b2ed893fe5")
 	)
 	(wire
 		(pts
@@ -7945,6 +7933,16 @@
 			(type default)
 		)
 		(uuid "e946c437-1948-4419-9a8a-6c32c115e458")
+	)
+	(wire
+		(pts
+			(xy 138.43 185.42) (xy 138.43 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eac48c50-374f-476a-b83f-19227b349717")
 	)
 	(wire
 		(pts
