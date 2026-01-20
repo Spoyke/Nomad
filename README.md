@@ -197,6 +197,9 @@ Gabriel : Finitions schéma elec carte CMD, début routage carte CMD, verificati
 
 Axel : Début d'utilisation et de diffusion du son du micro sur un esp32.
 
+Julie : Revoir les capteurs pour 
+Modifier et finir la schématique pour l'implémenter avec le PCB d'alimentation. Voir avec Gabriel pour le routage. 
+
 ## Ressources
 
 ### Lien utiles
