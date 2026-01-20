@@ -185,6 +185,25 @@ Aleks : Estimation de la distance entre esp32 et Raspberry PI faite, code du Mot
 
 Simon : Réalisation du PCB de la partie audio qui est presque terminé, mais il faudra attendre la prochaine séance pour envoyer la commande et être sûr qu'il puisse être utilisé avec les autres modules du robot (connecteurs aux bons endroits et dont la connexion entre les autres PCB n'est pas géné par les composants. J'ai aussi fait un bilan du courant consommé par le robot et je me suis rendu compte que le buck ne pourrait pas fournir un courant suffisant lorsque tous les composants fonctionnent au maximum (ce qui devrait être assez rare). On a donc décidé avec Gabriel d'utiliser deux buck (soit le buck actuelle qui sera utilisé jusqu'à ce qu'on le remplace par un autre buck plus puissant à un endroit prévu. Soit on utilise deux fois le même buck mais un des deux serait décdié au fonctionnement de l'ampli.).  
 
+## Séance 12 (13/01/2026)
+
+Tout le monde : Mise en accord sur le planning prévisionnel
+
+Aleks : début de la partie cartographie en expérimentant des capteurs dont le fonctionnement est similaire à un Lidar à l'aide d'une librairie Arduino, pour le moment pas de résultat concret à cause de certaine erreur lié a la partie programmation et au branchement des PINs
+
+Simon : Mise au propre du planning prévisionnel sur Google Agenda (lien tout en bas). Fin du routage de la partie audio.
+
+Gabriel : Finitions schéma elec carte CMD, début routage carte CMD, verification routage partie audio
+
+Axel : Début d'utilisation et de diffusion du son du micro sur un esp32.
+
+Julie : Revoir les capteurs pour 
+Modifier et finir la schématique pour l'implémenter avec le PCB d'alimentation. Voir avec Gabriel pour le routage. 
+
+## Séance 13 (20/01/2026)
+
+Simon : Fin du routage du PCB de la partie audio. 
+
 ## Ressources
 
 ### Lien utiles
@@ -197,4 +216,8 @@ https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0
 Infos MPU6050 https://docs.google.com/document/d/1O3AgjvM2_tZX7ABNkbS3lNtyRqeFLNvJ6qVK9URJxNs/edit?usp=sharing
 
 ### RSE
+
+### Planning prévisionnel du 2nd semestre
+
+https://calendar.google.com/calendar/ical/73473c3522efe55f20496e4b81c19aa0aaffa0a2a7005d1d658da9e635591a50%40group.calendar.google.com/public/basic.ics
 

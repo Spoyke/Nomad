@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "TAS2780")(type "KiCad")(uri "${KIPRJMOD}/Symboles/TAS2780.kicad_sym")(options "")(descr ""))
+)
