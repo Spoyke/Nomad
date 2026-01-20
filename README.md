@@ -200,6 +200,10 @@ Axel : Début d'utilisation et de diffusion du son du micro sur un esp32.
 Julie : Revoir les capteurs pour 
 Modifier et finir la schématique pour l'implémenter avec le PCB d'alimentation. Voir avec Gabriel pour le routage. 
 
+## Séance 13 (20/01/2026)
+
+Simon : Fin du routage du PCB de la partie audio. 
+
 ## Ressources
 
 ### Lien utiles
