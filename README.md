@@ -204,6 +204,8 @@ Modifier et finir la schématique pour l'implémenter avec le PCB d'alimentation
 
 Simon : Fin du routage du PCB de la partie audio. 
 
+Gabriel : Routage PCB Cmd, recherche composants.
+
 ## Ressources
 
 ### Lien utiles
