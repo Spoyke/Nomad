@@ -206,6 +206,8 @@ Simon : Fin du routage du PCB de la partie audio.
 
 Gabriel : Routage PCB Cmd, recherche composants.
 
+Axel : Complication au niveau de la diffusion de la voix, un problème surement lié au format de données envoyée
+
 ## Ressources
 
 ### Lien utiles
