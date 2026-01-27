@@ -208,6 +208,10 @@ Gabriel : Routage PCB Cmd, recherche composants.
 
 Axel : Complication au niveau de la diffusion de la voix, un problème surement lié au format de données envoyée
 
+## Séance 14 (27/01/2026)
+
+Gabriel : fin du routage pcb cmd
+
 ## Ressources
 
 ### Lien utiles
