@@ -212,6 +212,8 @@ Axel : Complication au niveau de la diffusion de la voix, un problème surement 
 
 Gabriel : fin du routage pcb cmd
 
+Simon : Fin du routage de la partie audio (adaptation du pcb de la partie audio au pcb de la partie commande). J'ai aussi essayé de faire fonctionner le premier PCB (en enlevant le buck qui ne fonctionnait pas) pour faire des tests avec l'ampli audio. Notamment communiquer avec lui et le configurer pour qu'il soit conforme à ce qu'on à besoin (puissance maximale, moyen de communication (I2S), type d'alimentation...). 
+
 ## Ressources
 
 ### Lien utiles
