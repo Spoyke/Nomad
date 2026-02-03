@@ -220,9 +220,9 @@ Axel : La transmission du micro depuis le telephone vers l'esp32 est fonctionnel
 
 ### Lien utiles
 
-Diapo : https://docs.google.com/presentation/d/1eaNsvsmn-reTe-8X8-2-HZ8j_HwDIsKxUu0F8LIjo8Q/edit?usp=sharing\
-Rapport : https://docs.google.com/document/d/1yTh4eJWGzI2o9GAGtWadODZ8SpGP1pLww7qxfcwqxjY/edit?usp=sharing\
-https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0\
+Diapo : https://docs.google.com/presentation/d/1eaNsvsmn-reTe-8X8-2-HZ8j_HwDIsKxUu0F8LIjo8Q/edit?usp=sharing \
+Rapport : https://docs.google.com/document/d/1yTh4eJWGzI2o9GAGtWadODZ8SpGP1pLww7qxfcwqxjY/edit?usp=sharing \
+https://www.notion.so/Partie-informatique-266923f17b6e80f486edd3fc771489f0 \
 Infos MPU6050 https://docs.google.com/document/d/1O3AgjvM2_tZX7ABNkbS3lNtyRqeFLNvJ6qVK9URJxNs/edit?usp=sharing
 
 ### RSE
