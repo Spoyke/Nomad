@@ -197,7 +197,7 @@ Gabriel : Finitions schéma elec carte CMD, début routage carte CMD, verificati
 
 Axel : Début d'utilisation et de diffusion du son du micro sur un esp32.
 
-Julie : Revoir les capteurs pour 
+Julie : Revoir les capteurs pour mesurer la distance de capture objet
 Modifier et finir la schématique pour l'implémenter avec le PCB d'alimentation. Voir avec Gabriel pour le routage. 
 
 ## Séance 13 (20/01/2026)
@@ -215,6 +215,12 @@ Gabriel : fin du routage pcb cmd
 Simon : Fin du routage de la partie audio (adaptation du pcb de la partie audio au pcb de la partie commande). J'ai aussi essayé de faire fonctionner le premier PCB (en enlevant le buck qui ne fonctionnait pas) pour faire des tests avec l'ampli audio. Notamment communiquer avec lui et le configurer pour qu'il soit conforme à ce qu'on à besoin (puissance maximale, moyen de communication (I2S), type d'alimentation...). 
 
 Axel : La transmission du micro depuis le telephone vers l'esp32 est fonctionnelle
+
+Julie : Branchement d'un moteur avec le module driver pour faire tourner le moteur. 
+
+## Séance 15 (03/02/2026)
+
+Julie : Deuxième prototype de boitier imprimé 3D. A tester avec deux moteurs et mesurer le courant nominal pour un fonctionnement normal. Voir le support le poids avec l'assemblage. 
 
 ## Ressources
 
