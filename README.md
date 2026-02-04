@@ -224,6 +224,8 @@ Julie : Branchement d'un moteur avec le module driver pour faire tourner le mote
 
 Julie : Deuxième prototype de boitier imprimé 3D. A tester avec deux moteurs et mesurer le courant nominal pour un fonctionnement normal. Voir le support le poids avec l'assemblage. 
 
+Simon et Aleks : On a essayé de faire fonctionner l'ampli de l'ancien PCB. Le PCB a différents problème comme le manque de résistance de pull-up sur les pins de l'I2C. Ce qui a compliquer la tâche. Au final, on arrive à envoyer la configuration à l'ampli mais on n'arrive pas à demander des données de l'ampli. 
+
 ## Ressources
 
 ### Lien utiles
