@@ -210,6 +210,8 @@ Axel : Complication au niveau de la diffusion de la voix, un problème surement 
 
 Julie: Etude des capteurs
 
+Aleks : Fonctionnement du détecteur infrarouge VL53L0X, estimation correcte jusqu'a une distance d'environ 1m.
+
 ## Séance 14 (27/01/2026)
 
 Gabriel : fin du routage pcb cmd
@@ -219,6 +221,8 @@ Simon : Fin du routage de la partie audio (adaptation du pcb de la partie audio 
 Axel : La transmission du micro depuis le telephone vers l'esp32 est fonctionnelle
 
 Julie : Branchement d'un moteur avec le module driver pour faire tourner le moteur. 
+
+Aleks: Finalisation "théorique" du programme concernant la cartographie, mais il faut tester ce dernier.
 
 ## Séance 15 (03/02/2026)
 
