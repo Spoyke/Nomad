@@ -8241,10 +8241,17 @@
 		(net 28)
 		(net_name "/VSNSN")
 		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "0be6487f-b084-4b1e-8c6c-a2f30edc3947")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30036)
+=======
+		(uuid "09a580f5-dd2a-4956-b977-bb3d048b5fe9")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30006)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -8263,17 +8270,28 @@
 		)
 		(polygon
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 145.175802 99.848182) (xy 144.975802 99.848182) (xy 144.567412 100.377772) (xy 144.9 100.601)
 				(xy 145.292314 100.521964)
+=======
+				(xy 139.4875 95.9) (xy 139.4875 96.9) (xy 140.325 96.9875) (xy 140.801 96.4) (xy 140.325 95.8125)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 145.174224 99.851609) (xy 145.17748 99.857888) (xy 145.290374 100.510747) (xy 145.288407 100.519483)
 				(xy 145.281156 100.524211) (xy 144.904781 100.600036) (xy 144.895994 100.59831) (xy 144.89595 100.598281)
 				(xy 144.577788 100.384736) (xy 144.572828 100.37728) (xy 144.574593 100.368501) (xy 144.575043 100.367876)
 				(xy 144.972289 99.852737) (xy 144.980055 99.848278) (xy 144.981554 99.848182) (xy 145.165951 99.848182)
+=======
+				(xy 140.327273 95.815708) (xy 140.328995 95.817431) (xy 140.795032 96.392635) (xy 140.797577 96.40122)
+				(xy 140.795032 96.407365) (xy 140.328995 96.982568) (xy 140.321124 96.986839) (xy 140.318688 96.98684)
+				(xy 139.497984 96.901095) (xy 139.490112 96.896827) (xy 139.4875 96.889458) (xy 139.4875 95.910541)
+				(xy 139.490927 95.902268) (xy 139.497982 95.898904) (xy 140.318689 95.813159)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 	)
@@ -8281,10 +8299,17 @@
 		(net 5)
 		(net_name "PVDD")
 		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "0df056a2-61cf-4348-87fc-b2e3f32386ca")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30008)
+=======
+		(uuid "0eba4aba-88ca-4029-ade4-8609398505f3")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30028)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -8303,28 +8328,38 @@
 		)
 		(polygon
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 138.145927 99.146967) (xy 138.853033 99.854073) (xy 139.317409 98.9625) (xy 138.800707 98.299293)
 				(xy 137.951385 98.9625)
+=======
+				(xy 139.7 104.25) (xy 139.9 104.25) (xy 140.269421 103.628387) (xy 139.8 103.299) (xy 139.330579 103.628387)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 138.807897 98.308523) (xy 138.807905 98.308533) (xy 139.312789 98.95657) (xy 139.31517 98.965203)
 				(xy 139.313936 98.969166) (xy 138.860402 99.839924) (xy 138.853541 99.845678) (xy 138.84462 99.844896)
 				(xy 138.841752 99.842792) (xy 138.145924 99.146964) (xy 137.961245 98.971849) (xy 137.957599 98.96367)
 				(xy 137.960805 98.955309) (xy 137.962088 98.954141) (xy 138.791475 98.306501) (xy 138.800104 98.304112)
+=======
+				(xy 139.80672 103.303715) (xy 140.260541 103.622156) (xy 140.265345 103.629713) (xy 140.263879 103.63771)
+				(xy 139.903401 104.244277) (xy 139.896228 104.249639) (xy 139.893343 104.25) (xy 139.706657 104.25)
+				(xy 139.698384 104.246573) (xy 139.696599 104.244277) (xy 139.33612 103.63771) (xy 139.334839 103.628848)
+				(xy 139.339457 103.622157) (xy 139.79328 103.303714) (xy 139.80202 103.301768)
 			)
 		)
 	)
 	(zone
-		(net 29)
-		(net_name "/VSNSP")
+		(net 6)
+		(net_name "OUTP")
 		(layer "F.Cu")
-		(uuid "16b5b487-fe84-4e6d-87d4-19a5ad6143de")
+		(uuid "0ec9572e-40e4-4242-82fd-f230516ea463")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30022)
+		(priority 30012)
 		(attr
 			(teardrop
 				(type padvia)
@@ -8343,21 +8378,149 @@
 		)
 		(polygon
 			(pts
-				(xy 150.2635 104.556874) (xy 150.0635 104.556874) (xy 149.291612 104.85) (xy 149.5 105.3385) (xy 149.975 105.512922)
+				(xy 148.1 103.925) (xy 147.1 103.925) (xy 147.0125 104.542774) (xy 147.6 105.101) (xy 148.1875 104.542774)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 150.256021 104.560301) (xy 150.259448 104.568574) (xy 150.258949 104.571954) (xy 149.978585 105.501041)
-				(xy 149.972914 105.507971) (xy 149.964004 105.508862) (xy 149.963351 105.508644) (xy 149.504745 105.340242)
-				(xy 149.49816 105.334173) (xy 149.498016 105.33385) (xy 149.296391 104.861204) (xy 149.296297 104.85225)
-				(xy 149.302562 104.845851) (xy 149.302965 104.845688) (xy 150.061493 104.557635) (xy 150.065647 104.556874)
-				(xy 150.247748 104.556874)
+				(xy 148.098114 103.928427) (xy 148.101425 103.935059) (xy 148.186654 104.536803) (xy 148.184422 104.545475)
+				(xy 148.183129 104.546926) (xy 147.608059 105.093342) (xy 147.599701 105.096556) (xy 147.591941 105.093342)
+				(xy 147.01687 104.546926) (xy 147.013233 104.538743) (xy 147.013344 104.536811) (xy 147.098575 103.935058)
+				(xy 147.103128 103.927348) (xy 147.110159 103.925) (xy 148.089841 103.925)
 			)
 		)
 	)
 	(zone
+		(net 8)
+		(net_name "IRQZ")
+		(layer "F.Cu")
+		(uuid "13e964fb-163c-4430-9970-25b62c9fcb2e")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30027)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 147.6375 89.875) (xy 147.6375 89.675) (xy 147.015887 89.305579) (xy 146.6865 89.775) (xy 147.015887 90.244421)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 147.02521 89.31112) (xy 147.030827 89.314458) (xy 147.631778 89.671599) (xy 147.637139 89.678771)
+				(xy 147.6375 89.681656) (xy 147.6375 89.868343) (xy 147.634073 89.876616) (xy 147.631777 89.878401)
+				(xy 147.02521 90.238879) (xy 147.016348 90.24016) (xy 147.009656 90.235541) (xy 146.759055 89.878401)
+				(xy 146.691214 89.781719) (xy 146.689268 89.77298) (xy 146.691215 89.76828) (xy 146.751998 89.681656)
+				(xy 147.009657 89.314457) (xy 147.017213 89.309654)
+			)
+		)
+	)
+	(zone
+		(net 1)
+		(net_name "HP_P")
+		(layer "F.Cu")
+		(uuid "146d6b8f-771e-4fea-9fd4-81eb981b3efe")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30003)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 148.9125 107.675) (xy 148.9125 106.675) (xy 148.075 106.5875) (xy 147.599 107.175) (xy 148.075 107.7625)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 148.902017 106.673904) (xy 148.909888 106.678172) (xy 148.9125 106.685541) (xy 148.9125 107.664458)
+				(xy 148.909073 107.672731) (xy 148.902016 107.676095) (xy 148.081311 107.76184) (xy 148.072726 107.759291)
+				(xy 148.071004 107.757568) (xy 147.604967 107.182365) (xy 147.602422 107.17378) (xy 147.604967 107.167635)
+				(xy 148.071005 106.59243) (xy 148.078875 106.58816) (xy 148.081307 106.588159)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+	)
+	(zone
+		(net 28)
+		(net_name "/VSNSN")
+		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+		(uuid "16b5b487-fe84-4e6d-87d4-19a5ad6143de")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30022)
+=======
+		(uuid "296f54a9-4298-4352-8f22-539480a41d48")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30038)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.692314 105.4375) (xy 142.692314 105.2375) (xy 142.122228 104.967412) (xy 141.899 105.3)
+				(xy 141.978036 105.692314)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 142.131333 104.971725) (xy 142.685623 105.23433) (xy 142.691633 105.240969) (xy 142.692314 105.244903)
+				(xy 142.692314 105.429251) (xy 142.688887 105.437524) (xy 142.684545 105.440271) (xy 141.990767 105.687772)
+				(xy 141.981824 105.687324) (xy 141.975816 105.680683) (xy 141.975366 105.679063) (xy 141.926705 105.437524)
+				(xy 141.899963 105.30478) (xy 141.901689 105.295994) (xy 141.901718 105.29595) (xy 141.93598 105.244903)
+				(xy 142.116613 104.975777) (xy 142.124067 104.970819)
+			)
+		)
+	)
+	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 24)
 		(net_name "/PVDD_SNS")
 		(layer "F.Cu")
@@ -8443,6 +8606,15 @@
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30035)
+=======
+		(net 27)
+		(net_name "IOVDD")
+		(layer "F.Cu")
+		(uuid "302d9d79-6ea6-4aee-8f7c-031f5cc46835")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30030)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -8461,13 +8633,13 @@
 		)
 		(polygon
 			(pts
-				(xy 150.129025 101.887604) (xy 149.987604 102.029025) (xy 150.367412 102.622228) (xy 150.700707 102.400707)
-				(xy 150.778036 102.007686)
+				(xy 146.600001 94.05) (xy 146.800001 94.05) (xy 147.167643 93.48717) (xy 146.6875 93.099) (xy 146.219562 93.505438)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 150.778036 102.007686) (xy 150.700707 102.400707) (xy 150.367412 102.622228) (xy 149.987604 102.029025)
 				(xy 150.129025 101.887604)
 			)
@@ -8666,6 +8838,12 @@
 				(xy 144.33055 100.524118) (xy 144.32843 100.52476) (xy 143.952308 100.600534) (xy 143.947686 100.600534)
 				(xy 143.571563 100.52476) (xy 143.56413 100.519766) (xy 143.562404 100.510979) (xy 143.563046 100.508859)
 				(xy 143.847022 99.814955) (xy 143.853327 99.808596) (xy 143.85785 99.807686) (xy 144.042144 99.807686)
+=======
+				(xy 146.695124 93.105164) (xy 147.159422 93.480524) (xy 147.163701 93.488391) (xy 147.161861 93.496021)
+				(xy 146.803464 94.044698) (xy 146.796071 94.049751) (xy 146.793669 94.05) (xy 146.6061 94.05) (xy 146.597827 94.046573)
+				(xy 146.596509 94.045001) (xy 146.225591 93.514068) (xy 146.223662 93.505323) (xy 146.227509 93.498535)
+				(xy 146.680097 93.105429) (xy 146.688589 93.102592)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 	)
@@ -8673,7 +8851,11 @@
 		(net 26)
 		(net_name "AVDD")
 		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "585b2c96-1f0a-48a6-84d2-99d1fdecda39")
+=======
+		(uuid "39d20fe0-6812-4b0c-82f8-ed187633ef3b")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30021)
@@ -8701,10 +8883,292 @@
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 144.801012 91.453427) (xy 144.803223 91.456506) (xy 145.070902 91.996858) (xy 145.071504 92.005793)
 				(xy 145.067909 92.01104) (xy 144.607491 92.394756) (xy 144.598941 92.39742) (xy 144.592509 92.394756)
 				(xy 144.13209 92.01104) (xy 144.127929 92.003111) (xy 144.129096 91.996862) (xy 144.396777 91.456505)
 				(xy 144.40352 91.450614) (xy 144.407261 91.45) (xy 144.792739 91.45)
+=======
+				(xy 141.07725 101.684563) (xy 141.079203 101.685609) (xy 141.398743 101.897988) (xy 141.402011 101.901256)
+				(xy 141.61439 102.220796) (xy 141.616116 102.229583) (xy 141.611122 102.237016) (xy 141.609169 102.238062)
+				(xy 140.917702 102.527924) (xy 140.908748 102.527962) (xy 140.904906 102.525407) (xy 140.774592 102.395093)
+				(xy 140.771165 102.38682) (xy 140.772075 102.382297) (xy 141.061938 101.690828) (xy 141.068296 101.684525)
+			)
+		)
+	)
+	(zone
+		(net 5)
+		(net_name "PVDD")
+		(layer "F.Cu")
+		(uuid "3ba1dc6f-2531-4739-aef4-52d3487c8f75")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30008)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 138.145927 99.146967) (xy 138.853033 99.854073) (xy 139.317409 98.9625) (xy 138.800707 98.299293)
+				(xy 137.951385 98.9625)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 138.807897 98.308523) (xy 138.807905 98.308533) (xy 139.312789 98.95657) (xy 139.31517 98.965203)
+				(xy 139.313936 98.969166) (xy 138.860402 99.839924) (xy 138.853541 99.845678) (xy 138.84462 99.844896)
+				(xy 138.841752 99.842792) (xy 138.145924 99.146964) (xy 137.961245 98.971849) (xy 137.957599 98.96367)
+				(xy 137.960805 98.955309) (xy 137.962088 98.954141) (xy 138.791475 98.306501) (xy 138.800104 98.304112)
+			)
+		)
+	)
+	(zone
+		(net 5)
+		(net_name "PVDD")
+		(layer "F.Cu")
+		(uuid "3bea1f28-5757-4047-826d-77067a07a2cb")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30000)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 140.8125 98.8) (xy 140.8125 97.8) (xy 139.9 97.6375) (xy 138.799 98.3) (xy 139.9 98.9625)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 140.802852 97.798281) (xy 140.810395 97.803105) (xy 140.8125 97.8098) (xy 140.8125 98.790199)
+				(xy 140.809073 98.798472) (xy 140.802851 98.801718) (xy 139.904321 98.96173) (xy 139.896238 98.960236)
+				(xy 138.81566 98.310025) (xy 138.810338 98.302823) (xy 138.811667 98.293968) (xy 138.81566 98.289975)
+				(xy 139.896239 97.639762) (xy 139.904319 97.638269)
+			)
+		)
+	)
+	(zone
+		(net 26)
+		(net_name "AVDD")
+		(layer "F.Cu")
+		(uuid "40d6ff09-4c27-45aa-bdce-2137d12b3113")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30021)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 144.4 93.35) (xy 144.8 93.35) (xy 145.075 92.794868) (xy 144.6 92.399) (xy 144.125 92.794868)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 144.607491 92.405243) (xy 145.067909 92.788958) (xy 145.07207 92.796887) (xy 145.070902 92.80314)
+				(xy 144.803223 93.343494) (xy 144.79648 93.349386) (xy 144.792739 93.35) (xy 144.407261 93.35) (xy 144.398988 93.346573)
+				(xy 144.396777 93.343494) (xy 144.129096 92.803138) (xy 144.128495 92.794205) (xy 144.132088 92.78896)
+				(xy 144.592509 92.405242) (xy 144.601059 92.402579)
+			)
+		)
+	)
+	(zone
+		(net 5)
+		(net_name "PVDD")
+		(layer "F.Cu")
+		(uuid "47bbf1f2-2751-4931-ba1e-cee439a13457")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30004)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 140.0875 97.8) (xy 140.0875 98.8) (xy 140.925 98.8875) (xy 141.401 98.3) (xy 140.925 97.7125)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 140.927273 97.715708) (xy 140.928995 97.717431) (xy 141.395032 98.292635) (xy 141.397577 98.30122)
+				(xy 141.395032 98.307365) (xy 140.928995 98.882568) (xy 140.921124 98.886839) (xy 140.918688 98.88684)
+				(xy 140.097984 98.801095) (xy 140.090112 98.796827) (xy 140.0875 98.789458) (xy 140.0875 97.810541)
+				(xy 140.090927 97.802268) (xy 140.097982 97.798904) (xy 140.918689 97.713159)
+			)
+		)
+	)
+	(zone
+		(net 27)
+		(net_name "IOVDD")
+		(layer "F.Cu")
+		(uuid "47f54703-fbc3-44fb-ace1-e1f36b2f9bac")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30019)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 141.8125 90.7) (xy 141.8125 91.1) (xy 142.434113 91.356921) (xy 142.776 90.9) (xy 142.434113 90.443079)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 142.434673 90.446555) (xy 142.439555 90.450352) (xy 142.770755 90.892991) (xy 142.772968 90.901668)
+				(xy 142.770755 90.907009) (xy 142.439555 91.349647) (xy 142.431855 91.354219) (xy 142.425718 91.353451)
+				(xy 141.819731 91.102988) (xy 141.813394 91.096661) (xy 141.8125 91.092175) (xy 141.8125 90.707824)
+				(xy 141.815927 90.699551) (xy 141.819729 90.697011) (xy 142.425719 90.446548)
+			)
+		)
+	)
+	(zone
+		(net 3)
+		(net_name "HP_N")
+		(layer "F.Cu")
+		(uuid "4cc549c4-f8f9-4ff7-989c-6645bb4acf6f")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30007)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 143.7875 106.6625) (xy 143.7875 107.6625) (xy 144.60122 107.75777) (xy 145.101 107.175) (xy 144.625 106.5875)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 144.627335 106.590731) (xy 144.628924 106.592344) (xy 145.09486 107.167422) (xy 145.097405 107.176007)
+				(xy 145.09465 107.182404) (xy 144.605275 107.753041) (xy 144.597288 107.75709) (xy 144.595033 107.757045)
+				(xy 143.797839 107.66371) (xy 143.790021 107.659344) (xy 143.7875 107.652089) (xy 143.7875 106.673198)
+				(xy 143.790927 106.664925) (xy 143.798154 106.661545) (xy 144.618789 106.588056)
+			)
+		)
+	)
+	(zone
+		(net 24)
+		(net_name "/PVDD_SNS")
+		(layer "F.Cu")
+		(uuid "5327cacc-b2a7-447b-b990-bf7ca1fdf9ff")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30018)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 140.68579 102.755631) (xy 140.544369 102.61421) (xy 139.641081 102.825) (xy 139.799293 103.300707)
+				(xy 140.2875 103.527321)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 140.546871 102.617144) (xy 140.548967 102.618808) (xy 140.679746 102.749587) (xy 140.683173 102.75786)
+				(xy 140.68187 102.763226) (xy 140.292645 103.51735) (xy 140.285805 103.52313) (xy 140.277322 103.522596)
+				(xy 139.803874 103.302833) (xy 139.797813 103.296242) (xy 139.79771 103.295948) (xy 139.645128 102.837168)
+				(xy 139.645769 102.82824) (xy 139.652538 102.822377) (xy 139.653563 102.822087) (xy 140.538037 102.615687)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 	)
@@ -9189,13 +9653,19 @@
 		)
 	)
 	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 1)
 		(net_name "HP_P")
 		(layer "F.Cu")
 		(uuid "64b3b9c1-50bf-4dec-94e9-ee4a54e46fc9")
+=======
+		(net 27)
+		(net_name "IOVDD")
+		(layer "F.Cu")
+		(uuid "61bda071-60c0-470a-8d5b-bb747cf4acc0")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30002)
+		(priority 30033)
 		(attr
 			(teardrop
 				(type padvia)
@@ -9214,21 +9684,104 @@
 		)
 		(polygon
 			(pts
-				(xy 148.1 110.1375) (xy 147.1 110.1375) (xy 146.788632 110.8125) (xy 147.35 111.4885) (xy 148.025 111.550429)
+				(xy 147.007686 91.4) (xy 147.007686 91.8) (xy 147.721964 91.992314) (xy 147.801 91.6) (xy 147.721964 91.207686)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 148.095935 110.140927) (xy 148.099362 110.1492) (xy 148.099346 110.14982) (xy 148.025644 111.538287)
-				(xy 148.021783 111.546367) (xy 148.01334 111.549351) (xy 148.012891 111.549318) (xy 147.354832 111.488943)
-				(xy 147.346907 111.484775) (xy 147.3469 111.484767) (xy 146.793345 110.818176) (xy 146.790696 110.809622)
-				(xy 146.791721 110.805803) (xy 147.096864 110.144299) (xy 147.103441 110.138222) (xy 147.107488 110.1375)
-				(xy 148.087662 110.1375)
+				(xy 147.718796 91.212087) (xy 147.724256 91.219185) (xy 147.724428 91.219916) (xy 147.800534 91.597689)
+				(xy 147.800534 91.602311) (xy 147.724428 91.980083) (xy 147.719434 91.987516) (xy 147.710647 91.989242)
+				(xy 147.709916 91.98907) (xy 147.016344 91.802331) (xy 147.009246 91.796871) (xy 147.007686 91.791033)
+				(xy 147.007686 91.408966) (xy 147.011113 91.400693) (xy 147.016341 91.397669) (xy 147.709918 91.210929)
 			)
 		)
 	)
 	(zone
+		(net 5)
+		(net_name "PVDD")
+		(layer "F.Cu")
+		(uuid "626fca65-e1d1-47b0-b1d0-3d8489c810d9")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30013)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.7125 98.4) (xy 142.7125 98.2) (xy 141.970671 97.73153) (xy 141.399 98.3) (xy 141.970671 98.86847)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 141.978552 97.736507) (xy 142.707047 98.196556) (xy 142.712213 98.203871) (xy 142.7125 98.206449)
+				(xy 142.7125 98.39355) (xy 142.709073 98.401823) (xy 142.707047 98.403443) (xy 141.978555 98.863491)
+				(xy 141.96973 98.865011) (xy 141.964058 98.861894) (xy 141.501396 98.401823) (xy 141.407341 98.308294)
+				(xy 141.403892 98.300033) (xy 141.407296 98.29175) (xy 141.964059 97.738104) (xy 141.972341 97.734701)
+			)
+		)
+	)
+	(zone
+		(net 23)
+		(net_name "/BST_P")
+		(layer "F.Cu")
+		(uuid "62fca9b1-b6d9-4005-9ba6-ccfdc9164850")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30026)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 148.891085 102.555914) (xy 148.749664 102.697335) (xy 148.7875 103.472487) (xy 149.325707 103.438207)
+				(xy 149.589059 102.9625)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 148.89887 102.560449) (xy 148.990783 102.61399) (xy 148.993164 102.615825) (xy 149.180736 102.803397)
+				(xy 149.251203 102.873864) (xy 149.30926 102.897912) (xy 149.343269 102.911999) (xy 149.34327 102.911999)
+				(xy 149.343272 102.912) (xy 149.499208 102.912) (xy 149.505097 102.91359) (xy 149.579167 102.956738)
+				(xy 149.584591 102.963864) (xy 149.583514 102.972515) (xy 149.328808 103.432605) (xy 149.321803 103.438183)
+				(xy 149.319316 103.438614) (xy 148.799351 103.471732) (xy 148.790876 103.468838) (xy 148.786931 103.4608)
+				(xy 148.786921 103.460626) (xy 148.785553 103.432605) (xy 148.749916 102.70251) (xy 148.752935 102.694082)
+				(xy 148.753308 102.69369) (xy 148.884712 102.562286) (xy 148.892984 102.55886)
+			)
+		)
+	)
+	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 7)
 		(net_name "VBAT1S")
 		(layer "F.Cu")
@@ -9236,6 +9789,14 @@
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30004)
+=======
+		(net 22)
+		(net_name "/BST_N")
+		(layer "F.Cu")
+		(uuid "68aa85a5-0f7a-4463-9864-d04781f6d054")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30035)
 		(attr
 			(teardrop
 				(type padvia)
@@ -9254,16 +9815,56 @@
 		)
 		(polygon
 			(pts
-				(xy 142.1125 96.9) (xy 142.1125 95.9) (xy 141.275 95.8125) (xy 140.799 96.4) (xy 141.275 96.9875)
+				(xy 144.049997 99.807686) (xy 143.849997 99.807686) (xy 143.557683 100.521964) (xy 143.949997 100.601)
+				(xy 144.342311 100.521964)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 142.102017 95.898904) (xy 142.109888 95.903172) (xy 142.1125 95.910541) (xy 142.1125 96.889458)
-				(xy 142.109073 96.897731) (xy 142.102016 96.901095) (xy 141.281311 96.98684) (xy 141.272726 96.984291)
-				(xy 141.271004 96.982568) (xy 140.804967 96.407365) (xy 140.802422 96.39878) (xy 140.804967 96.392635)
-				(xy 141.271005 95.81743) (xy 141.278875 95.81316) (xy 141.281307 95.813159)
+				(xy 144.050417 99.811113) (xy 144.052972 99.814955) (xy 144.336947 100.508859) (xy 144.336909 100.517813)
+				(xy 144.33055 100.524118) (xy 144.32843 100.52476) (xy 143.952308 100.600534) (xy 143.947686 100.600534)
+				(xy 143.571563 100.52476) (xy 143.56413 100.519766) (xy 143.562404 100.510979) (xy 143.563046 100.508859)
+				(xy 143.847022 99.814955) (xy 143.853327 99.808596) (xy 143.85785 99.807686) (xy 144.042144 99.807686)
+			)
+		)
+	)
+	(zone
+		(net 28)
+		(net_name "/VSNSN")
+		(layer "F.Cu")
+		(uuid "70f02ea6-4cb4-4e34-a119-4d75371e8e7d")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30029)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.25 105.2375) (xy 142.25 105.4375) (xy 142.871613 105.806921) (xy 143.201 105.3375) (xy 142.871613 104.868079)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 142.877843 104.876958) (xy 143.196284 105.33078) (xy 143.198231 105.33952) (xy 143.196284 105.34422)
+				(xy 142.877843 105.798041) (xy 142.870286 105.802845) (xy 142.862289 105.801379) (xy 142.255723 105.440901)
+				(xy 142.250361 105.433728) (xy 142.25 105.430843) (xy 142.25 105.244156) (xy 142.253427 105.235883)
+				(xy 142.255718 105.234101) (xy 142.862289 104.873619) (xy 142.871151 104.872339)
 			)
 		)
 	)
@@ -9271,10 +9872,11 @@
 		(net 24)
 		(net_name "/PVDD_SNS")
 		(layer "F.Cu")
-		(uuid "6ed4c479-5b51-4a5d-ab10-3413ed04fb16")
+		(uuid "711300b5-a23c-4e59-bed9-6a8f50d4b79d")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30017)
+		(priority 30031)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -9293,17 +9895,206 @@
 		)
 		(polygon
 			(pts
-				(xy 140.68579 102.755631) (xy 140.544369 102.61421) (xy 139.641081 102.825) (xy 139.799293 103.300707)
-				(xy 140.2875 103.527321)
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 142.1125 96.9) (xy 142.1125 95.9) (xy 141.275 95.8125) (xy 140.799 96.4) (xy 141.275 96.9875)
+=======
+				(xy 139.9 103.95) (xy 139.7 103.95) (xy 139.332062 104.494562) (xy 139.8 104.901) (xy 140.267938 104.494562)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 142.102017 95.898904) (xy 142.109888 95.903172) (xy 142.1125 95.910541) (xy 142.1125 96.889458)
+				(xy 142.109073 96.897731) (xy 142.102016 96.901095) (xy 141.281311 96.98684) (xy 141.272726 96.984291)
+				(xy 141.271004 96.982568) (xy 140.804967 96.407365) (xy 140.802422 96.39878) (xy 140.804967 96.392635)
+				(xy 141.271005 95.81743) (xy 141.278875 95.81316) (xy 141.281307 95.813159)
+=======
+				(xy 139.902058 103.953427) (xy 139.90348 103.95515) (xy 140.262136 104.485975) (xy 140.263928 104.494748)
+				(xy 140.260113 104.501358) (xy 139.807672 104.894336) (xy 139.799179 104.897174) (xy 139.792328 104.894336)
+				(xy 139.339886 104.501358) (xy 139.335887 104.493346) (xy 139.337862 104.485977) (xy 139.69652 103.955149)
+				(xy 139.703992 103.950213) (xy 139.706215 103.95) (xy 139.893785 103.95)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+	)
+	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+		(net 24)
+		(net_name "/PVDD_SNS")
+		(layer "F.Cu")
+		(uuid "6ed4c479-5b51-4a5d-ab10-3413ed04fb16")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30017)
+=======
+		(net 29)
+		(net_name "/VSNSP")
+		(layer "F.Cu")
+		(uuid "83038a44-e9e5-4417-a608-08c97692a1de")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30024)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 140.68579 102.755631) (xy 140.544369 102.61421) (xy 139.641081 102.825) (xy 139.799293 103.300707)
+				(xy 140.2875 103.527321)
+=======
+				(xy 150.2635 104.556874) (xy 150.0635 104.556874) (xy 149.291612 104.85) (xy 149.5 105.3385) (xy 149.975 105.512922)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 140.546871 102.617144) (xy 140.548967 102.618808) (xy 140.679746 102.749587) (xy 140.683173 102.75786)
 				(xy 140.68187 102.763226) (xy 140.292645 103.51735) (xy 140.285805 103.52313) (xy 140.277322 103.522596)
 				(xy 139.803874 103.302833) (xy 139.797813 103.296242) (xy 139.79771 103.295948) (xy 139.645128 102.837168)
 				(xy 139.645769 102.82824) (xy 139.652538 102.822377) (xy 139.653563 102.822087) (xy 140.538037 102.615687)
+=======
+				(xy 150.256021 104.560301) (xy 150.259448 104.568574) (xy 150.258949 104.571954) (xy 149.978585 105.501041)
+				(xy 149.972914 105.507971) (xy 149.964004 105.508862) (xy 149.963351 105.508644) (xy 149.504745 105.340242)
+				(xy 149.49816 105.334173) (xy 149.498016 105.33385) (xy 149.296391 104.861204) (xy 149.296297 104.85225)
+				(xy 149.302562 104.845851) (xy 149.302965 104.845688) (xy 150.061493 104.557635) (xy 150.065647 104.556874)
+				(xy 150.247748 104.556874)
+			)
+		)
+	)
+	(zone
+		(net 4)
+		(net_name "OUTN")
+		(layer "F.Cu")
+		(uuid "869a4a8f-a661-4617-a7bd-8de54471202a")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30011)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 145.6 103.925) (xy 144.6 103.925) (xy 144.5125 104.542774) (xy 145.1 105.101) (xy 145.6875 104.542774)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 145.598114 103.928427) (xy 145.601425 103.935059) (xy 145.686654 104.536803) (xy 145.684422 104.545475)
+				(xy 145.683129 104.546926) (xy 145.108059 105.093342) (xy 145.099701 105.096556) (xy 145.091941 105.093342)
+				(xy 144.51687 104.546926) (xy 144.513233 104.538743) (xy 144.513344 104.536811) (xy 144.598575 103.935058)
+				(xy 144.603128 103.927348) (xy 144.610159 103.925) (xy 145.589841 103.925)
+			)
+		)
+	)
+	(zone
+		(net 25)
+		(net_name "/DREG")
+		(layer "F.Cu")
+		(uuid "8b24e93f-6725-4ca2-b78d-c69980919787")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30034)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 150.441499 100.118414) (xy 150.300078 100.259835) (xy 150.287502 100.7625) (xy 150.825709 101.000707)
+				(xy 151.103592 100.525)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 150.449366 100.123245) (xy 151.093839 100.519011) (xy 151.099095 100.52626) (xy 151.097819 100.534882)
+				(xy 150.830984 100.991676) (xy 150.823852 100.997092) (xy 150.816146 100.996474) (xy 150.294658 100.765667)
+				(xy 150.288479 100.759185) (xy 150.287697 100.754678) (xy 150.299961 100.264507) (xy 150.303383 100.256529)
+				(xy 150.434971 100.124941) (xy 150.443243 100.121515)
+			)
+		)
+	)
+	(zone
+		(net 1)
+		(net_name "HP_P")
+		(layer "F.Cu")
+		(uuid "8d2ecc88-a14e-45ca-9451-a809c498d204")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30009)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 147.1 108.35) (xy 148.1 108.35) (xy 148.1875 107.732225) (xy 147.6 107.174) (xy 147.0125 107.732225)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 147.608059 107.181657) (xy 148.183129 107.728072) (xy 148.186766 107.736255) (xy 148.186654 107.738195)
+				(xy 148.101425 108.339941) (xy 148.096872 108.347652) (xy 148.089841 108.35) (xy 147.110159 108.35)
+				(xy 147.101886 108.346573) (xy 147.098575 108.339941) (xy 147.013345 107.738193) (xy 147.015577 107.729523)
+				(xy 147.016865 107.728076) (xy 147.591941 107.181656) (xy 147.600299 107.178443)
 			)
 		)
 	)
@@ -9311,10 +10102,287 @@
 		(net 27)
 		(net_name "IOVDD")
 		(layer "F.Cu")
-		(uuid "774dc6be-f23e-48f7-9340-96dc3946711f")
+		(uuid "8e157169-c6e7-450c-9f43-945929a3e048")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30032)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.292314 91.1) (xy 142.292314 90.7) (xy 141.578036 90.507686) (xy 141.499 90.9) (xy 141.578036 91.292314)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 141.590066 90.510925) (xy 142.283657 90.697669) (xy 142.290754 90.703128) (xy 142.292314 90.708966)
+				(xy 142.292314 91.091033) (xy 142.288887 91.099306) (xy 142.283656 91.102331) (xy 141.590083 91.28907)
+				(xy 141.581203 91.287912) (xy 141.575743 91.280814) (xy 141.575577 91.28011) (xy 141.499465 90.902308)
+				(xy 141.499465 90.897691) (xy 141.575572 90.519913) (xy 141.580565 90.512483) (xy 141.589352 90.510757)
+			)
+		)
+	)
+	(zone
+		(net 26)
+		(net_name "AVDD")
+		(layer "F.Cu")
+		(uuid "925cfb7f-4010-4df1-bc66-f1fcef41ca59")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30022)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 144.8 91.45) (xy 144.4 91.45) (xy 144.125 92.005131) (xy 144.6 92.401) (xy 145.075 92.005131)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 144.801012 91.453427) (xy 144.803223 91.456506) (xy 145.070902 91.996858) (xy 145.071504 92.005793)
+				(xy 145.067909 92.01104) (xy 144.607491 92.394756) (xy 144.598941 92.39742) (xy 144.592509 92.394756)
+				(xy 144.13209 92.01104) (xy 144.127929 92.003111) (xy 144.129096 91.996862) (xy 144.396777 91.456505)
+				(xy 144.40352 91.450614) (xy 144.407261 91.45) (xy 144.792739 91.45)
+			)
+		)
+	)
+	(zone
+		(net 26)
+		(net_name "AVDD")
+		(layer "F.Cu")
+		(uuid "9d086f78-89ee-43e3-9f4c-29c0c3c5b03c")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30016)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 144.4 91.85) (xy 144.8 91.85) (xy 145.069421 91.228387) (xy 144.6 90.899) (xy 144.130579 91.228387)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 144.60672 90.903715) (xy 145.061613 91.222908) (xy 145.066417 91.230465) (xy 145.065628 91.237138)
+				(xy 144.803054 91.842953) (xy 144.79662 91.849181) (xy 144.792319 91.85) (xy 144.407681 91.85) (xy 144.399408 91.846573)
+				(xy 144.396946 91.842953) (xy 144.32567 91.678504) (xy 144.13437 91.237135) (xy 144.134225 91.228184)
+				(xy 144.138384 91.22291) (xy 144.59328 90.903714) (xy 144.60202 90.901768)
+			)
+		)
+	)
+	(zone
+		(net 27)
+		(net_name "IOVDD")
+		(layer "F.Cu")
+		(uuid "a1927ed6-4559-47c3-9d42-729ecd6865c5")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30023)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 146.8875 92.15) (xy 146.4875 92.15) (xy 146.2125 92.705131) (xy 146.6875 93.101) (xy 147.1625 92.705131)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 146.888512 92.153427) (xy 146.890723 92.156506) (xy 147.158402 92.696858) (xy 147.159004 92.705793)
+				(xy 147.155409 92.71104) (xy 146.694991 93.094756) (xy 146.686441 93.09742) (xy 146.680009 93.094756)
+				(xy 146.21959 92.71104) (xy 146.215429 92.703111) (xy 146.216596 92.696862) (xy 146.484277 92.156505)
+				(xy 146.49102 92.150614) (xy 146.494761 92.15) (xy 146.880239 92.15)
+			)
+		)
+	)
+	(zone
+		(net 2)
+		(net_name "GND")
+		(layer "F.Cu")
+		(uuid "b74084ed-0fb8-46c1-a6e2-b4c9eb5040c5")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30039)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 150.129025 101.887604) (xy 149.987604 102.029025) (xy 150.367412 102.622228) (xy 150.700707 102.400707)
+				(xy 150.778036 102.007686)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 150.778036 102.007686) (xy 150.700707 102.400707) (xy 150.367412 102.622228) (xy 149.987604 102.029025)
+				(xy 150.129025 101.887604)
+			)
+		)
+	)
+	(zone
+		(net 27)
+		(net_name "IOVDD")
+		(layer "F.Cu")
+		(uuid "bdc0572c-5c92-4a75-a029-5edfb8684aba")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30020)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 146.4875 92.5625) (xy 146.8875 92.5625) (xy 147.144421 91.940887) (xy 146.6875 91.599) (xy 146.230579 91.940887)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 146.694507 91.604243) (xy 147.137147 91.935444) (xy 147.141719 91.943144) (xy 147.140951 91.949281)
+				(xy 146.890489 92.555269) (xy 146.884162 92.561606) (xy 146.879676 92.5625) (xy 146.495324 92.5625)
+				(xy 146.487051 92.559073) (xy 146.484511 92.555269) (xy 146.234048 91.949281) (xy 146.234055 91.940326)
+				(xy 146.23785 91.935446) (xy 146.680491 91.604243) (xy 146.689168 91.602031)
+			)
+		)
+	)
+	(zone
+		(net 22)
+		(net_name "/BST_N")
+		(layer "F.Cu")
+		(uuid "c44e6fa4-e639-45c4-97b4-02a016503ae1")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30025)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.3625 103.3375) (xy 142.3625 103.5375) (xy 142.984113 103.894421) (xy 143.376 103.4375) (xy 142.984113 102.980579)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 142.990419 102.987931) (xy 143.369467 103.429883) (xy 143.372252 103.438394) (xy 143.369467 103.445117)
+				(xy 142.990419 103.887068) (xy 142.982432 103.891117) (xy 142.975712 103.889597) (xy 142.368374 103.540872)
+				(xy 142.362906 103.533781) (xy 142.3625 103.530726) (xy 142.3625 103.344273) (xy 142.365927 103.336)
+				(xy 142.368374 103.334127) (xy 142.975713 102.985401) (xy 142.984593 102.984254)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+	)
+	(zone
+		(net 27)
+		(net_name "IOVDD")
+		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+		(uuid "774dc6be-f23e-48f7-9340-96dc3946711f")
+=======
+		(uuid "c945fc6f-1e22-4ecb-91ca-056748a840a8")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30017)
 		(attr
 			(teardrop
 				(type padvia)
@@ -9347,6 +10415,7 @@
 		)
 	)
 	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 8)
 		(net_name "IRQZ")
 		(layer "F.Cu")
@@ -9469,6 +10538,12 @@
 		(net_name "/VSNSN")
 		(layer "F.Cu")
 		(uuid "81e70544-b122-4e8a-ac2f-96b47600422b")
+=======
+		(net 28)
+		(net_name "/VSNSN")
+		(layer "F.Cu")
+		(uuid "d3cdf464-64df-45bf-84b3-dd348ed53015")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30034)
@@ -9506,6 +10581,7 @@
 		)
 	)
 	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 24)
 		(net_name "/PVDD_SNS")
 		(layer "F.Cu")
@@ -9513,6 +10589,15 @@
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30029)
+=======
+		(net 7)
+		(net_name "VBAT1S")
+		(layer "F.Cu")
+		(uuid "d549cff5-820a-4c13-84c0-e349a21f07b8")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30005)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -9531,27 +10616,45 @@
 		)
 		(polygon
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 139.9 103.95) (xy 139.7 103.95) (xy 139.332062 104.494562) (xy 139.8 104.901) (xy 140.267938 104.494562)
+=======
+				(xy 142.1125 96.9) (xy 142.1125 95.9) (xy 141.275 95.8125) (xy 140.799 96.4) (xy 141.275 96.9875)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 139.902058 103.953427) (xy 139.90348 103.95515) (xy 140.262136 104.485975) (xy 140.263928 104.494748)
 				(xy 140.260113 104.501358) (xy 139.807672 104.894336) (xy 139.799179 104.897174) (xy 139.792328 104.894336)
 				(xy 139.339886 104.501358) (xy 139.335887 104.493346) (xy 139.337862 104.485977) (xy 139.69652 103.955149)
 				(xy 139.703992 103.950213) (xy 139.706215 103.95) (xy 139.893785 103.95)
+=======
+				(xy 142.102017 95.898904) (xy 142.109888 95.903172) (xy 142.1125 95.910541) (xy 142.1125 96.889458)
+				(xy 142.109073 96.897731) (xy 142.102016 96.901095) (xy 141.281311 96.98684) (xy 141.272726 96.984291)
+				(xy 141.271004 96.982568) (xy 140.804967 96.407365) (xy 140.802422 96.39878) (xy 140.804967 96.392635)
+				(xy 141.271005 95.81743) (xy 141.278875 95.81316) (xy 141.281307 95.813159)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 	)
 	(zone
-		(net 27)
-		(net_name "IOVDD")
+		(net 8)
+		(net_name "IRQZ")
 		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "908df6bf-e23c-423c-a712-7ad8a20fbdf5")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30018)
+=======
+		(uuid "d891c236-27e0-4fb3-af0c-8db3bed2db5a")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30015)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -9570,16 +10673,28 @@
 		)
 		(polygon
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 146.4875 92.5625) (xy 146.8875 92.5625) (xy 147.144421 91.940887) (xy 146.6875 91.599) (xy 146.230579 91.940887)
+=======
+				(xy 145.870469 90.45061) (xy 146.01189 90.592031) (xy 146.871752 90.2625) (xy 146.688207 89.774293)
+				(xy 146.2125 89.578249)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 				(xy 146.694507 91.604243) (xy 147.137147 91.935444) (xy 147.141719 91.943144) (xy 147.140951 91.949281)
 				(xy 146.890489 92.555269) (xy 146.884162 92.561606) (xy 146.879676 92.5625) (xy 146.495324 92.5625)
 				(xy 146.487051 92.559073) (xy 146.484511 92.555269) (xy 146.234048 91.949281) (xy 146.234055 91.940326)
 				(xy 146.23785 91.935446) (xy 146.680491 91.604243) (xy 146.689168 91.602031)
+=======
+				(xy 146.223384 89.582734) (xy 146.683503 89.772354) (xy 146.689846 89.778674) (xy 146.689997 89.779054)
+				(xy 146.86766 90.251618) (xy 146.867363 90.260568) (xy 146.860895 90.26666) (xy 146.01898 90.589313)
+				(xy 146.010028 90.589074) (xy 146.00652 90.586661) (xy 145.875884 90.456025) (xy 145.872457 90.447752)
+				(xy 145.873264 90.443481) (xy 146.208155 89.58933) (xy 146.214366 89.582879) (xy 146.223319 89.582708)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 	)
@@ -10026,49 +11141,17 @@
 		(net 28)
 		(net_name "/VSNSN")
 		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "e82e2377-ad34-4b9d-8ee8-80be24ea339b")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30026)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(filled_areas_thickness no)
-		(fill yes
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-			(island_removal_mode 1)
-			(island_area_min 10)
-		)
-		(polygon
-			(pts
-				(xy 142.25 105.2375) (xy 142.25 105.4375) (xy 142.871613 105.806921) (xy 143.201 105.3375) (xy 142.871613 104.868079)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 142.877843 104.876958) (xy 143.196284 105.33078) (xy 143.198231 105.33952) (xy 143.196284 105.34422)
-				(xy 142.877843 105.798041) (xy 142.870286 105.802845) (xy 142.862289 105.801379) (xy 142.255723 105.440901)
-				(xy 142.250361 105.433728) (xy 142.25 105.430843) (xy 142.25 105.244156) (xy 142.253427 105.235883)
-				(xy 142.255718 105.234101) (xy 142.862289 104.873619) (xy 142.871151 104.872339)
-			)
-		)
-	)
-	(zone
-		(net 27)
-		(net_name "IOVDD")
-		(layer "F.Cu")
-		(uuid "eb530c26-f0d5-42dc-8a81-caa61741533b")
+=======
+		(uuid "dc72600f-cf60-42bb-936e-0218e2be291d")
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
-		(priority 30028)
+		(priority 30041)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(attr
 			(teardrop
 				(type padvia)
@@ -10087,55 +11170,16 @@
 		)
 		(polygon
 			(pts
-				(xy 146.600001 94.05) (xy 146.800001 94.05) (xy 147.167643 93.48717) (xy 146.6875 93.099) (xy 146.219562 93.505438)
+				(xy 144.975802 99.8191) (xy 145.175802 99.8191) (xy 145.202802 99.6921) (xy 145.075802 99.399) (xy 144.948802 99.6921)
 			)
 		)
 		(filled_polygon
 			(layer "F.Cu")
 			(pts
-				(xy 146.695124 93.105164) (xy 147.159422 93.480524) (xy 147.163701 93.488391) (xy 147.161861 93.496021)
-				(xy 146.803464 94.044698) (xy 146.796071 94.049751) (xy 146.793669 94.05) (xy 146.6061 94.05) (xy 146.597827 94.046573)
-				(xy 146.596509 94.045001) (xy 146.225591 93.514068) (xy 146.223662 93.505323) (xy 146.227509 93.498535)
-				(xy 146.680097 93.105429) (xy 146.688589 93.102592)
-			)
-		)
-	)
-	(zone
-		(net 22)
-		(net_name "/BST_N")
-		(layer "F.Cu")
-		(uuid "ecd73e60-5490-40d6-a498-0de8dea42f25")
-		(name "$teardrop_padvia$")
-		(hatch none 0.1)
-		(priority 30023)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(filled_areas_thickness no)
-		(fill yes
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-			(island_removal_mode 1)
-			(island_area_min 10)
-		)
-		(polygon
-			(pts
-				(xy 142.3625 103.3375) (xy 142.3625 103.5375) (xy 142.984113 103.894421) (xy 143.376 103.4375) (xy 142.984113 102.980579)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 142.990419 102.987931) (xy 143.369467 103.429883) (xy 143.372252 103.438394) (xy 143.369467 103.445117)
-				(xy 142.990419 103.887068) (xy 142.982432 103.891117) (xy 142.975712 103.889597) (xy 142.368374 103.540872)
-				(xy 142.362906 103.533781) (xy 142.3625 103.530726) (xy 142.3625 103.344273) (xy 142.365927 103.336)
-				(xy 142.368374 103.334127) (xy 142.975713 102.985401) (xy 142.984593 102.984254)
+				(xy 145.080454 99.417693) (xy 145.086538 99.423777) (xy 145.201316 99.688671) (xy 145.202024 99.695756)
+				(xy 145.177772 99.809833) (xy 145.1727 99.817213) (xy 145.166328 99.8191) (xy 144.985276 99.8191)
+				(xy 144.977003 99.815673) (xy 144.973832 99.809833) (xy 144.949579 99.695756) (xy 144.950286 99.688673)
+				(xy 145.065066 99.423776) (xy 145.0715 99.417549)
 			)
 		)
 	)
@@ -10143,7 +11187,129 @@
 		(net 3)
 		(net_name "HP_N")
 		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+		(uuid "eb530c26-f0d5-42dc-8a81-caa61741533b")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30028)
+=======
+		(uuid "de787cab-806f-41b9-96c8-4f0eff790a60")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30010)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 146.600001 94.05) (xy 146.800001 94.05) (xy 147.167643 93.48717) (xy 146.6875 93.099) (xy 146.219562 93.505438)
+=======
+				(xy 144.6 108.35) (xy 145.6 108.35) (xy 145.6875 107.732225) (xy 145.1 107.174) (xy 144.5125 107.732225)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 146.695124 93.105164) (xy 147.159422 93.480524) (xy 147.163701 93.488391) (xy 147.161861 93.496021)
+				(xy 146.803464 94.044698) (xy 146.796071 94.049751) (xy 146.793669 94.05) (xy 146.6061 94.05) (xy 146.597827 94.046573)
+				(xy 146.596509 94.045001) (xy 146.225591 93.514068) (xy 146.223662 93.505323) (xy 146.227509 93.498535)
+				(xy 146.680097 93.105429) (xy 146.688589 93.102592)
+=======
+				(xy 145.108059 107.181657) (xy 145.683129 107.728072) (xy 145.686766 107.736255) (xy 145.686654 107.738195)
+				(xy 145.601425 108.339941) (xy 145.596872 108.347652) (xy 145.589841 108.35) (xy 144.610159 108.35)
+				(xy 144.601886 108.346573) (xy 144.598575 108.339941) (xy 144.513345 107.738193) (xy 144.515577 107.729523)
+				(xy 144.516865 107.728076) (xy 145.091941 107.181656) (xy 145.100299 107.178443)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+	)
+	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+		(net 22)
+		(net_name "/BST_N")
+		(layer "F.Cu")
+		(uuid "ecd73e60-5490-40d6-a498-0de8dea42f25")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30023)
+=======
+		(net 1)
+		(net_name "HP_P")
+		(layer "F.Cu")
+		(uuid "efc0eb07-c866-45c5-b95d-0cb570e3d3bb")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30002)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 142.3625 103.3375) (xy 142.3625 103.5375) (xy 142.984113 103.894421) (xy 143.376 103.4375) (xy 142.984113 102.980579)
+=======
+				(xy 148.1 110.1375) (xy 147.1 110.1375) (xy 146.788632 110.8125) (xy 147.35 111.4885) (xy 148.025 111.550429)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+				(xy 142.990419 102.987931) (xy 143.369467 103.429883) (xy 143.372252 103.438394) (xy 143.369467 103.445117)
+				(xy 142.990419 103.887068) (xy 142.982432 103.891117) (xy 142.975712 103.889597) (xy 142.368374 103.540872)
+				(xy 142.362906 103.533781) (xy 142.3625 103.530726) (xy 142.3625 103.344273) (xy 142.365927 103.336)
+				(xy 142.368374 103.334127) (xy 142.975713 102.985401) (xy 142.984593 102.984254)
+=======
+				(xy 148.095935 110.140927) (xy 148.099362 110.1492) (xy 148.099346 110.14982) (xy 148.025644 111.538287)
+				(xy 148.021783 111.546367) (xy 148.01334 111.549351) (xy 148.012891 111.549318) (xy 147.354832 111.488943)
+				(xy 147.346907 111.484775) (xy 147.3469 111.484767) (xy 146.793345 110.818176) (xy 146.790696 110.809622)
+				(xy 146.791721 110.805803) (xy 147.096864 110.144299) (xy 147.103441 110.138222) (xy 147.107488 110.1375)
+				(xy 148.087662 110.1375)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
+			)
+		)
+	)
+	(zone
+		(net 3)
+		(net_name "HP_N")
+		(layer "F.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "f4a64cbe-f301-40b4-a0b1-a899b6545bc1")
+=======
+		(uuid "f5314a7f-5b9f-45d9-8f8d-a9182377b91d")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30001)
@@ -10180,6 +11346,7 @@
 		)
 	)
 	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 2)
 		(net_name "GND")
 		(layer "B.Cu")
@@ -10190,10 +11357,29 @@
 			(clearance 0.5)
 		)
 		(min_thickness 0.25)
+=======
+		(net 7)
+		(net_name "VBAT1S")
+		(layer "F.Cu")
+		(uuid "f8eafba2-3f74-4c21-8ece-06068256fd00")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30014)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(filled_areas_thickness no)
 		(fill yes
 			(thermal_gap 0.5)
 			(thermal_bridge_width 0.5)
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		)
 		(polygon
 			(pts
@@ -10494,6 +11680,65 @@
 				(xy 143.734106 90.637332) (xy 143.734103 90.637341) (xy 143.6995 90.811304) (xy 133.5005 90.811304)
 				(xy 133.5005 82.7245) (xy 133.520185 82.657461) (xy 133.572989 82.611706) (xy 133.6245 82.6005)
 				(xy 156.8755 82.6005)
+=======
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 143.295637 97.237058) (xy 143.437058 97.095637) (xy 143.075 96.203248) (xy 142.599293 96.399293)
+				(xy 142.465749 96.9375)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 143.073077 96.207746) (xy 143.079397 96.214089) (xy 143.079422 96.214148) (xy 143.434142 97.088449)
+				(xy 143.434077 97.097404) (xy 143.431573 97.101121) (xy 143.300892 97.231802) (xy 143.292619 97.235229)
+				(xy 143.288647 97.234534) (xy 142.475673 96.941082) (xy 142.469054 96.93505) (xy 142.468289 96.927262)
+				(xy 142.597868 96.405033) (xy 142.603186 96.397832) (xy 142.604754 96.397042) (xy 143.064124 96.20773)
+			)
+		)
+	)
+	(zone
+		(net 22)
+		(net_name "/BST_N")
+		(layer "F.Cu")
+		(uuid "faf8e2c7-b958-479c-a1e9-45e24478e58a")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30037)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.792314 103.5375) (xy 142.792314 103.3375) (xy 142.222228 103.067412) (xy 141.999 103.4)
+				(xy 142.078036 103.792314)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 142.231333 103.071725) (xy 142.785623 103.33433) (xy 142.791633 103.340969) (xy 142.792314 103.344903)
+				(xy 142.792314 103.529251) (xy 142.788887 103.537524) (xy 142.784545 103.540271) (xy 142.090767 103.787772)
+				(xy 142.081824 103.787324) (xy 142.075816 103.780683) (xy 142.075366 103.779063) (xy 142.026705 103.537524)
+				(xy 141.999963 103.40478) (xy 142.001689 103.395994) (xy 142.001718 103.39595) (xy 142.03598 103.344903)
+				(xy 142.216613 103.075777) (xy 142.224067 103.070819)
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 			)
 		)
 	)
@@ -10501,7 +11746,11 @@
 		(net 22)
 		(net_name "/BST_N")
 		(layer "B.Cu")
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(uuid "3ce8a6ea-f739-4a1c-8804-0a33045dd3b8")
+=======
+		(uuid "2cabf44f-ee2c-401d-9f68-1f198d882c53")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30000)
@@ -10618,6 +11867,7 @@
 		)
 	)
 	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
 		(net 24)
 		(net_name "/PVDD_SNS")
 		(layer "B.Cu")
@@ -10662,6 +11912,12 @@
 		(net_name "/VSNSN")
 		(layer "B.Cu")
 		(uuid "f3e6a31a-aeff-4b54-992d-cd4c9cba2d34")
+=======
+		(net 28)
+		(net_name "/VSNSN")
+		(layer "B.Cu")
+		(uuid "8e9304dc-eb8d-4438-bb93-d5bb36b66691")
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(name "$teardrop_padvia$")
 		(hatch none 0.1)
 		(priority 30002)
@@ -10698,6 +11954,129 @@
 		)
 	)
 	(zone
+<<<<<<< Updated upstream:PCBs/Audio/Audio.kicad_pcb
+=======
+		(net 28)
+		(net_name "/VSNSN")
+		(layer "B.Cu")
+		(uuid "8f0e47ec-f5e6-4a45-b352-38db0a95a542")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30004)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 144.755692 101.392314) (xy 144.955692 101.392314) (xy 145.232588 100.822228) (xy 144.9 100.599)
+				(xy 144.507686 100.678036)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 144.904005 100.601689) (xy 144.904049 100.601718) (xy 145.224137 100.816556) (xy 145.229097 100.824012)
+				(xy 145.228141 100.831383) (xy 144.958892 101.385726) (xy 144.952195 101.39167) (xy 144.948368 101.392314)
+				(xy 144.764015 101.392314) (xy 144.755742 101.388887) (xy 144.752962 101.384452) (xy 144.512082 100.690697)
+				(xy 144.512606 100.681757) (xy 144.519297 100.675806) (xy 144.520821 100.675389) (xy 144.895218 100.599963)
+			)
+		)
+	)
+	(zone
+		(net 24)
+		(net_name "/PVDD_SNS")
+		(layer "B.Cu")
+		(uuid "aa25f328-6c98-4416-bd7b-884e8dec6883")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30003)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 141.967425 101.351819) (xy 141.826004 101.210398) (xy 141.177772 101.567412) (xy 141.399293 101.900707)
+				(xy 141.792314 101.978036)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 141.83222 101.216614) (xy 141.962588 101.346982) (xy 141.966015 101.355255) (xy 141.965583 101.358406)
+				(xy 141.795227 101.967618) (xy 141.789699 101.974662) (xy 141.7817 101.975947) (xy 141.404077 101.901648)
+				(xy 141.396622 101.896688) (xy 141.18481 101.578001) (xy 141.183084 101.569214) (xy 141.188078 101.561781)
+				(xy 141.188896 101.561285) (xy 141.818303 101.214638) (xy 141.827203 101.213649)
+			)
+		)
+	)
+	(zone
+		(net 22)
+		(net_name "/BST_N")
+		(layer "B.Cu")
+		(uuid "f1fd3301-8d63-4b38-8c33-115f4099aa19")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30001)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 142.630961 102.91046) (xy 142.48954 102.769039) (xy 141.777772 103.067412) (xy 141.999293 103.400707)
+				(xy 142.332588 103.622228)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 142.495093 102.774592) (xy 142.625407 102.904906) (xy 142.628834 102.913179) (xy 142.627924 102.917702)
+				(xy 142.338062 103.609169) (xy 142.331703 103.615474) (xy 142.322749 103.615436) (xy 142.320796 103.61439)
+				(xy 142.001256 103.402011) (xy 141.997988 103.398743) (xy 141.785609 103.079203) (xy 141.783883 103.070416)
+				(xy 141.788877 103.062983) (xy 141.79082 103.061942) (xy 142.482297 102.772074) (xy 142.491251 102.772037)
+			)
+		)
+	)
+	(zone
+>>>>>>> Stashed changes:PCB/PCBs_v2/Partie_audio/Audio.kicad_pcb
 		(net 2)
 		(net_name "GND")
 		(layer "In1.Cu")
