@@ -241,6 +241,10 @@ Gabriel : Continuation du programme de test moteurs, réussite, les moteurs tour
 
 Axel : Avancement dans la voix, plus beaucoup de micro coupures dues au rechargement du buffer
 
+### Séance 17 (17/02/2026)
+
+Simon et Gabriel : Soudure de la carte 
+
 ## Ressources
 
 ### Lien utiles
