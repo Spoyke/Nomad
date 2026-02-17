@@ -54,7 +54,8 @@ Cette partie vise à conceptionner plusieurs robots capables de se déplacer dan
 - Extraction des pistes (gauche/droite, avant/arrière)
 - Synchronisation des amplis
 
-## Séance 1 (16/09/2025)
+## Compte rendus de séance
+### Séance 1 (16/09/2025)
 
 *Julie, Simon, Gabriel* :
 
@@ -69,7 +70,7 @@ Mettre en commun les schématique afin de commander les composantes.
 Etablir une communication entre les esp32 - Rasberry Pi - Téléphone
 Transmission de son via une application mobile
 
-## Séance 2 (23/09/2025)
+### Séance 2 (23/09/2025)
 
 "Julie, Simon, Gabriel" : 
 
@@ -90,7 +91,7 @@ Planning prévisionnel :
 
 <img width="1354" height="362" alt="image" src="https://github.com/user-attachments/assets/6d0e3242-3ce1-4a6d-a6a6-cdb654a1a0d4" />
 
-## Séance 3 (30/09/2025)
+### Séance 3 (30/09/2025)
 
 Simon : commande des composants, continuer le PCB
 
@@ -103,7 +104,7 @@ Axel : transmission d'un fichier audio avec la rasberry Pi sur l'esp32. Vérifie
 
 Julie: conception mécanique du robot (modélisation Onshape)
 
-## Séance 4 (07/10/2025)
+### Séance 4 (07/10/2025)
 
 Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et reprérer les amplis dans l'espace. Utilisation de l'intensité du signal pour déterminer la distance entre la raspberry pi et les esp32. Et, les esp32 entre eux, en demendans au esp de transmettre un signal périodiquement pour permettre aux autres de déterminer la distance avec ce dernier. Dans le cas du projet de conférencier, le conférencier porte la raspberry pi et les esp32 se placent dans un rayon de 3m autour de ce dernier. Et, à une certaine distance (à déterminer) entre eux. Ainsi, chaque esp32 va essayer de rester à une distance de 3m du conférencier et suffisament espacé des autres esp32.
 
@@ -115,7 +116,7 @@ Simon : Recherche sur les moyens de gérer les déplacement des amplis audio et 
 
  Axel : Lecture du son reçue sur l'esp32 depuis la raspberry avec l'ampli audio LM386. Actuellement le son est de très mauvaise qualitée, mais reconnaisable, car il est diffusé par le DAC de l'esp32. Deux objectifs pour la prochaine séance : - essayer un autre DAC pour voir si la qualité est meilleurs et mise en place de l'application pour commencer le contrôle de la raspberry via le telephone.
 
-## Séance 5 (21/10/2025)
+### Séance 5 (21/10/2025)
 
 Aleks : Implémentation d'un système de connexion dans le code qui scan les signaux Wi-Fi aux alentours, a présent, il est possible de se connecter a un réseau Wi-Fi tant que l'ESP32 capte le signal et tant que l'on connait le mot de passe du wifi (falcutatif)
 
@@ -125,7 +126,7 @@ Simon : Début du travaille sur la synchronisation des ESP32 : La raspberry pi e
 
 Gabriel : finalisation pcb, creation gerbers, envoi en production
 
-## Séance 6 (4/11/2025)
+### Séance 6 (4/11/2025)
 
 Aleks : Début de code sur la spatialisation des ESP32, le but sera d'estimer (pour l'instant de manière ni précise et plutôt naïve) la distance entre l'esp32 et la raspberry en fonction de l'intensité RSSI du signal wif.
 
@@ -137,7 +138,7 @@ Gabriel : verification avancement commande pcb, tests de fonctionnement capteur 
 
 Julie : Impression du premier prototypage du boîtier d'ampli audio. Tester l'ultrason et les moteurs pour la prochaine séance. Il faut aussi commander les moteurs, les esp32, les haut parleurs et les batteries pour la prochaine séance. 
 
-## Séance 7 (19/11/2025)
+### Séance 7 (19/11/2025)
 
 Gabriel : Entretien sur fiche de compétances, recherche composants pour soudure pcb, reflexion à des solutions aux problèmes d'empruntes de composants 
 
@@ -147,7 +148,7 @@ Simon et Aleks : Travail sur la mesure de la distance entre les esp32 pour qu'il
 
 Axel : Le son est synchronisé avec 3 esp32s, il faut maintenant le spatialiser.
 
-## Séance 8 (25/11/2025)
+### Séance 8 (25/11/2025)
 
 Axel : Le son est maintenant stéréo. Prochaine étape : enregistrement et diffusion de la voix via un micro I2S
 
@@ -155,7 +156,7 @@ Simon Et Aleks : On a fait fonctionner le capteur à ultrason pour détecter les
 
 Gabriel et Julie : Soudure des composants qui n'avaient pas les bonnes empruntes. Reflexion sur la prochaine version du pcb
 
-## Séance 9 (02/12/2025)
+### Séance 9 (02/12/2025)
 
 Gabriel : Test du fonctionnement des composants et du fonctionnent général de la carte. applications solutions des problèmes de composants.
 
@@ -168,7 +169,7 @@ Aleks : Début de recherche et de programmation pour le mouvement des moteurs
 Point sur la solution technique du déplacement et la répartition des tâches: 
 <img width="700" height="600" alt="Capture d’écran   2025-11-04 à 19 11 56" src="https://github.com/user-attachments/assets/27bcbc2a-6ace-44b0-9d6b-02ccb0a96ae7" />
 
-## Séance 10 (09/12/2025)
+### Séance 10 (09/12/2025)
 
 Axel : Test du micro I2S enfin concluant, possibilité de le lire sur le pc, il faut maintenant l'envoyer sur le serveur icecast
 
@@ -179,13 +180,13 @@ Simon : Travail sur le schéma du PCB de la partie audio, vérification des calc
 Aleks : Continuation de la programmation du mouvement des moteurs, mesure et estimation de la distance entre l'esp32 et la raspberry PI avec le RSSI
 
 
-## Séance 11 (16/12/2025)
+### Séance 11 (16/12/2025)
 
 Aleks : Estimation de la distance entre esp32 et Raspberry PI faite, code du MotorDriver (TB6612FNG) terminé (en théorie). Objectif de la prochaine séance : codé un encodeur et les moteurs en eux-même.
 
 Simon : Réalisation du PCB de la partie audio qui est presque terminé, mais il faudra attendre la prochaine séance pour envoyer la commande et être sûr qu'il puisse être utilisé avec les autres modules du robot (connecteurs aux bons endroits et dont la connexion entre les autres PCB n'est pas géné par les composants. J'ai aussi fait un bilan du courant consommé par le robot et je me suis rendu compte que le buck ne pourrait pas fournir un courant suffisant lorsque tous les composants fonctionnent au maximum (ce qui devrait être assez rare). On a donc décidé avec Gabriel d'utiliser deux buck (soit le buck actuelle qui sera utilisé jusqu'à ce qu'on le remplace par un autre buck plus puissant à un endroit prévu. Soit on utilise deux fois le même buck mais un des deux serait décdié au fonctionnement de l'ampli.).  
 
-## Séance 12 (13/01/2026)
+### Séance 12 (13/01/2026)
 
 Tout le monde : Mise en accord sur le planning prévisionnel
 
@@ -200,7 +201,7 @@ Axel : Début d'utilisation et de diffusion du son du micro sur un esp32.
 Julie : Revoir les capteurs pour mesurer la distance de capture objet
 Modifier et finir la schématique pour l'implémenter avec le PCB d'alimentation. Voir avec Gabriel pour le routage. 
 
-## Séance 13 (20/01/2026)
+### Séance 13 (20/01/2026)
 
 Simon : Fin du routage du PCB de la partie audio. 
 
@@ -212,7 +213,7 @@ Julie: Etude des capteurs
 
 Aleks : Fonctionnement du détecteur infrarouge VL53L0X, estimation correcte jusqu'a une distance d'environ 1m.
 
-## Séance 14 (27/01/2026)
+### Séance 14 (27/01/2026)
 
 Gabriel : fin du routage pcb cmd
 
@@ -224,7 +225,7 @@ Julie : Branchement d'un moteur avec le module driver pour faire tourner le mote
 
 Aleks: Finalisation "théorique" du programme concernant la cartographie, mais il faut tester ce dernier.
 
-## Séance 15 (03/02/2026)
+### Séance 15 (03/02/2026)
 
 Julie : Deuxième prototype de boitier imprimé 3D. A tester avec deux moteurs et mesurer le courant nominal pour un fonctionnement normal. Voir le support le poids avec l'assemblage. 
 
@@ -232,7 +233,7 @@ Simon et Aleks : On a essayé de faire fonctionner l'ampli de l'ancien PCB. Le P
 
 Gabriel : finalisation du routage cmd + création d'un schéma de cablage pour le test des moteurs. Cablage de ces moteurs et début de création d'un programme de test.
 
-## Séance 16 (10/02/2026)
+### Séance 16 (10/02/2026)
 
 Simon et Aleks : On a compris pourquoi la communication avec le TAS2780 ne fonctionnait pas : l'ampli utilise du 1.8V pour ses pins numériques alors que l'esp32 utilise du 3.3V. Et en recevant du 3.3V, l'ampli se met en sécurité. Ce qui empêche la communication. 
 
