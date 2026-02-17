@@ -238,6 +238,8 @@ Simon et Aleks : On a compris pourquoi la communication avec le TAS2780 ne fonct
 
 Gabriel : Continuation du programme de test moteurs, réussite, les moteurs tournent. Tests avec Julie du couple des moteurs alimentés directement sans controleur sur le prototype du robot, et tests de couple sur les moteurs controlés depuis l'esp 32.
 
+Axel : Avancement dans la voix, plus beaucoup de micro coupures dues au rechargement du buffer
+
 ## Ressources
 
 ### Lien utiles
