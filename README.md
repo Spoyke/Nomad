@@ -230,9 +230,13 @@ Julie : Deuxième prototype de boitier imprimé 3D. A tester avec deux moteurs e
 
 Simon et Aleks : On a essayé de faire fonctionner l'ampli de l'ancien PCB. Le PCB a différents problème comme le manque de résistance de pull-up sur les pins de l'I2C. Ce qui a compliquer la tâche. Au final, on arrive à envoyer la configuration à l'ampli mais on n'arrive pas à demander des données de l'ampli. 
 
+Gabriel : finalisation du routage cmd + création d'un schéma de cablage pour le test des moteurs. Cablage de ces moteurs et début de création d'un programme de test.
+
 ## Séance 16 (10/02/2026)
 
 Simon et Aleks : On a compris pourquoi la communication avec le TAS2780 ne fonctionnait pas : l'ampli utilise du 1.8V pour ses pins numériques alors que l'esp32 utilise du 3.3V. Et en recevant du 3.3V, l'ampli se met en sécurité. Ce qui empêche la communication. 
+
+Gabriel : Continuation du programme de test moteurs, réussite, les moteurs tournent. Tests avec Julie du couple des moteurs alimentés directement sans controleur sur le prototype du robot, et tests de couple sur les moteurs controlés depuis l'esp 32.
 
 ## Ressources
 
