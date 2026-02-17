@@ -16,7 +16,6 @@ int pwmResolution = 6; // Resolution in bits (0-255 for 8 bit res)
 
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   gpio_set_direction((gpio_num_t)AI1, GPIO_MODE_OUTPUT);
   gpio_set_direction((gpio_num_t)AI2, GPIO_MODE_OUTPUT);
@@ -24,7 +23,7 @@ void setup() {
   ledcSetup(pwmChannel, pwmFreq, pwmResolution); // channel, freq, resolution
   ledcAttachPin(pwmPin, pwmChannel); // attach GPIO pin to LEDC channel
 
-  ledcWrite(pwmChannel, 255); // channel, duty cycle (0-255 for 8 bit resolution)
+  ledcWrite(pwmChannel, 255); // channel, duty cycle (0-255 for 8 bit resolution) 255 is full speed, 0 is lowest/stopped
 
 
   Serial.println("Setup finished.");
@@ -33,15 +32,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   digitalWrite(AI1, HIGH);
-  digitalWrite(AI2, LOW);
+  digitalWrite(AI2, LOW); // Setting to spin in one direction
 
-  /*
-  Serial.println("spinning forward...");
-  delay(5000);
 
-  digitalWrite(AI1, LOW);
-  digitalWrite(AI2, HIGH);
-  Serial.println("spinning backward...");
-  delay(5000);
-  */
 }

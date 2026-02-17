@@ -1,10 +1,6 @@
 {
   "board": {
-<<<<<<< Updated upstream:PCBs/Commande/Partie_cmd.kicad_prl
-    "active_layer": 2,
-=======
-    "active_layer": 4,
->>>>>>> Stashed changes:PCB/PCBs_v2/Partie_cmd/Partie_cmd.kicad_prl
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -96,18 +92,18 @@
       11
     ],
     "col_widths": [
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      10,
-      62
+      186,
+      171,
+      112,
+      79,
+      112,
+      112,
+      112,
+      83,
+      112,
+      112,
+      112,
+      112
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
