@@ -5345,6 +5345,12 @@
 		(uuid "2c7d26a1-1bb5-45b2-bdf9-0eb3ecc37086")
 	)
 	(junction
+		(at 57.15 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "378d5278-8777-4aa3-b4ed-42c1039f36f5")
+	)
+	(junction
 		(at 193.04 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5718,6 +5724,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 170.18) (xy 58.42 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19058e4c-8b15-4ce9-a8be-18d5afc54234")
+	)
+	(wire
+		(pts
 			(xy 152.4 123.19) (xy 162.56 123.19)
 		)
 		(stroke
@@ -5795,6 +5811,16 @@
 			(type default)
 		)
 		(uuid "22ce81c0-d4e2-4207-839f-8e5b7608c7a9")
+	)
+	(wire
+		(pts
+			(xy 57.15 173.99) (xy 57.15 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27d2aa53-59a9-46d2-a244-428074d42a81")
 	)
 	(wire
 		(pts
@@ -6738,6 +6764,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 170.18) (xy 55.88 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a21cac0c-6bb5-447b-aa46-62790b94904c")
+	)
+	(wire
+		(pts
 			(xy 212.09 50.8) (xy 210.82 50.8)
 		)
 		(stroke
@@ -6985,6 +7021,16 @@
 			(type default)
 		)
 		(uuid "c8374846-80a6-4691-8748-85815862c077")
+	)
+	(wire
+		(pts
+			(xy 58.42 170.18) (xy 58.42 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8abcfa1-3b3f-4e56-87ab-835f28da711c")
 	)
 	(wire
 		(pts
@@ -7315,6 +7361,16 @@
 			(type default)
 		)
 		(uuid "efd01e4d-3bbb-4309-a5ee-939d59c28feb")
+	)
+	(wire
+		(pts
+			(xy 57.15 170.18) (xy 55.88 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f002cd1f-e330-4852-b133-d86d3b87756c")
 	)
 	(wire
 		(pts
@@ -9659,7 +9715,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 55.88 166.37 0)
+		(at 57.15 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9667,7 +9723,7 @@
 		(dnp no)
 		(uuid "193bd646-2c01-4167-91f3-60ca6aae6ad3")
 		(property "Reference" "#PWR022"
-			(at 55.88 172.72 0)
+			(at 57.15 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9676,7 +9732,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 54.102 169.926 0)
+			(at 55.118 180.594 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9685,7 +9741,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 166.37 0)
+			(at 57.15 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9694,7 +9750,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 166.37 0)
+			(at 57.15 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9703,7 +9759,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 55.88 166.37 0)
+			(at 57.15 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10431,7 +10487,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_1.27mm:PinSocket_1x15_P1.27mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.00mm:PinSocket_1x15_P2.00mm_Vertical"
 			(at 48.26 161.29 0)
 			(effects
 				(font
@@ -14032,72 +14088,6 @@
 			(project "Partie_cmd"
 				(path "/feb16e15-81d7-49b9-8315-2aeb60da597a"
 					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 58.42 166.37 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9f208751-f8ed-40f9-ba26-841001d8d4c2")
-		(property "Reference" "#PWR024"
-			(at 58.42 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 56.642 169.926 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 58.42 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 58.42 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "165323a5-482f-47f4-82fa-3871ceff4ee1")
-		)
-		(instances
-			(project "Partie_cmd"
-				(path "/feb16e15-81d7-49b9-8315-2aeb60da597a"
-					(reference "#PWR024")
 					(unit 1)
 				)
 			)
