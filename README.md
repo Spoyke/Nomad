@@ -241,9 +241,13 @@ Gabriel : Continuation du programme de test moteurs, réussite, les moteurs tour
 
 Axel : Avancement dans la voix, plus beaucoup de micro coupures dues au rechargement du buffer
 
+Julie : Reprise du PCB Commande, notamment il faut changer les empreintes suite à l'arrivée de la deuxième version du PCB contenant des mauvaise empreintes. 
+
 ### Séance 17 (17/02/2026)
 
 Simon et Gabriel : Soudure de la carte 
+
+Julie : Continuation du PCB commande. La commander pour la recevoir à la rentrée. 
 
 ## Ressources
 
