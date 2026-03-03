@@ -18,7 +18,19 @@ const char url[] = "http://10.42.0.1:8000/streamright";
 WiFiUDP udp;
 const unsigned int localUdpPort = 12345;
 IPAddress multicastIP(239, 0, 0, 1); 
-uint8_t packetBuffer[2048]; // Buffer large pour encaisser les paquets de 1280 octets
+uint8_t packetBuffer[2048];
+
+i2s_config_t i2s_config = {
+    .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_TX),
+    .sample_rate = 16000,
+    .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,
+    .channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT,
+    .communication_format = I2S_COMM_FORMAT_STAND_I2S,
+    .intr_alloc_flags = ESP_INTR_FLAG_LEVEL1,
+    .dma_buf_count = 32,  // Augmenté pour encaisser les délais réseau
+    .dma_buf_len = 128,
+    .use_apll = false
+};
 
 // --- VARIABLES DE SYNCHRO ---
 uint32_t targetEpochMillis = 0;
@@ -54,9 +66,6 @@ void setup() {
         delay(500);
         Serial.print(".");
     }
-    // --- CRITIQUE : Désactive l'économie d'énergie pour l'audio temps réel ---
-    WiFi.setSleep(false); 
-    Serial.println("\nWiFi OK - Mode Performance activé");
     // 2. Initialisation Audio
     Audio_init();
     // 3. Services
@@ -70,8 +79,7 @@ void loop() {
     WS_loop();     
     Audio_loop();  
     while (int packetSize = udp.parsePacket()) {
-        int len = udp.read(packetBuffer, 2048); 
-        
+        int len = udp.read(packetBuffer, 2048);         
         if (len > 0) {
             if (len >= 5 && memcmp(packetBuffer, "salut", 5) == 0) {
                 Serial.println(">>> Mode MICRO (16kHz Multicast)");
@@ -88,7 +96,6 @@ void loop() {
             }
         }
     }
-
     if (hasTargetTime) {
         startAudio(url);
         hasTargetTime = false;

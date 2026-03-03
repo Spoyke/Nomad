@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_phoenix: ^1.1.1
   flutter_sound: ^9.28.0
   http: ^1.5.0
   permission_handler: ^11.4.0

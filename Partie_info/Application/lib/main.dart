@@ -173,6 +173,7 @@ class _MyAppState extends State<MyApp> {
     try {
       _udpSocket = await RawDatagramSocket.bind(InternetAddress.anyIPv4, 0);
       _udpSocket!.send(utf8.encode("salut"), InternetAddress(esp32Ip), port);
+      debugPrint("salut");
       setState(() {
         statusLogs = "🔴 Diffusion active";
         isStreaming = true;
@@ -180,11 +181,10 @@ class _MyAppState extends State<MyApp> {
 
       // --- SUPPRESSION DU MESSAGE "SALUT" (Il pollue le flux audio) ---
 
-      // Code bon pour le python
+      // Code bon pour le pythonzzz
       _audioSubscription = _recorder.audioStream.listen((data) {
         if (_udpSocket != null && isStreaming) {
-          // Si data[i] est entre 0 et 255, c'est du Uint8.
-          // On l'envoie directement sans boucle for coûteuse.
+          // Envoi direct des bytes sans conversion complexe
           _udpSocket!.send(Uint8List.fromList(data.map((e) => e.toInt()).toList()), InternetAddress(esp32Ip), port);
         }
       });
@@ -279,6 +279,7 @@ class _MyAppState extends State<MyApp> {
                       isStreaming: isStreaming,
                       statusLogs: statusLogs,
                       onToggleStreaming: isStreaming ? stopStreaming : startStreaming,
+                      onVolumeChanged: (val) => _socketService.send("rPI", "VolumeMic", val.toInt().toString()),
                     ),
                   ],
                 ),

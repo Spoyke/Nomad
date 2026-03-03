@@ -89,6 +89,10 @@ class _VolumeButton extends StatelessWidget {
     final overlay = Overlay.of(context);
     late OverlayEntry entry;
 
+    // On crée une variable locale pour que l'overlay soit réactif
+    // indépendamment du reste de l'application
+    double tempVolume = currentVolume;
+
     entry = OverlayEntry(
       builder: (context) => Positioned(
         right: 16,
@@ -96,41 +100,55 @@ class _VolumeButton extends StatelessWidget {
         height: 150,
         child: Material(
           color: Colors.transparent,
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: Colors.deepPurple.withOpacity(0.9),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: RotatedBox(
-              quarterTurns: -1,
-              child: Slider(
-                value: currentVolume,
-                min: 0,
-                max: 21,
-                activeColor: Colors.white,
-                inactiveColor: Colors.white54,
-                onChanged: (val) {
-                  onVolumeChanged(val);
-                  // On ne peut pas facilement redessiner l'overlay sans un Stateful,
-                  // mais pour l'instant ça mettra à jour la valeur sur l'ESP32.
-                },
-              ),
-            ),
+          child: StatefulBuilder(
+            builder: (context, setOverlayState) {
+              return Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple.withOpacity(0.9),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [BoxShadow(color: Colors.black26, blurRadius: 4, offset: Offset(0, 2))],
+                ),
+                child: RotatedBox(
+                  quarterTurns: -1,
+                  child: Slider(
+                    value: tempVolume.clamp(0, 21),
+                    min: 0,
+                    max: 21,
+                    activeColor: Colors.white,
+                    inactiveColor: Colors.white54,
+                    onChanged: (val) {
+                      // 1. On met à jour l'état local de l'Overlay (pour le visuel)
+                      setOverlayState(() {
+                        tempVolume = val;
+                      });
+
+                      // 2. On appelle le callback parent (pour l'ESP32)
+                      onVolumeChanged(val);
+                    },
+                  ),
+                ),
+              );
+            },
           ),
         ),
       ),
     );
 
     overlay.insert(entry);
-    Future.delayed(const Duration(seconds: 3), () => entry.remove());
+
+    // On retire l'overlay après 3 secondes
+    Future.delayed(const Duration(seconds: 3), () {
+      if (entry.mounted) {
+        entry.remove();
+      }
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: const Icon(Icons.volume_down_alt),
-      color: Colors.deepPurple,
+      icon: Icon(currentVolume == 0 ? Icons.volume_mute : Icons.volume_down_alt, color: Colors.deepPurple),
       onPressed: () => _showVolumeOverlay(context),
     );
   }
