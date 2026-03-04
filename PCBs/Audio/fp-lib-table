@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "TAS2780")(type "KiCad")(uri "${KIPRJMOD}/Footprints/footprints.pretty")(options "")(descr ""))
-)
