@@ -9613,7 +9613,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_BarrelJack:BarrelJack_Wuerth_694108106102_2.5x5.5mm"
+		(property "Footprint" "BarrelJack (PPZ):CONN3_06105102_WRE"
 			(at 25.4 34.036 0)
 			(effects
 				(font
