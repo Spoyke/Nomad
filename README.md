@@ -1,4 +1,4 @@
-# **Son Spatial**
+ # **Son Spatial**
 *Projet étudiant S7*
 
 ## Description du projet 
@@ -252,6 +252,12 @@ Julie : Continuation du PCB commande. La commander pour la recevoir à la rentr�
 ### Séance 18 (10/03/2026)
 
 Simon : Soudure des derniers composants sur le pcb audio (connecteur). Et test de la carte : -> la communication I2C fonctionne mais pour l'instant il n'y a pas de son en sortie de l'ampli. 
+
+Gabriel : Création montage pour test encodeurs et début création code test encodeurs.
+
+### Séance 19 (17/03/2026)
+
+Gabriel : Test encodeurs, création morceaux de code pour detecter le sens de rotation du moteur aunsi que valeur absolue pour vérifier vitesse. Finitions pcb fait par Julie.
 
 ## Ressources
 
