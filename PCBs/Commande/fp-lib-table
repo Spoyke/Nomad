@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Jack (PPZ)")(type "KiCad")(uri "/Users/julie.xiaoni/Documents/KiCad/9.0/footprints/BarrelJack.pretty")(options "")(descr ""))
+)
