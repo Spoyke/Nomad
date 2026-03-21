@@ -1,0 +1,69 @@
+Future<void> startStreaming() async {
+    pause();
+    if (await Permission.microphone.request().isDenied) {
+      setState(() => statusLogs = "Micro refusé");
+      return;
+    }
+    try {
+      _udpSocket = await RawDatagramSocket.bind(InternetAddress.anyIPv4, 0);
+      _udpSocket!.send(utf8.encode("salut"), InternetAddress(esp32Ip), port);
+      debugPrint("salut");
+      setState(() {
+        statusLogs = "🔴 Diffusion active";
+        isStreaming = true;
+      });
+
+      // --- SUPPRESSION DU MESSAGE "SALUT" (Il pollue le flux audio) ---
+
+      // Code bon pour le pythonzzz
+      _audioSubscription = _recorder.audioStream.listen((data) {
+        if (_udpSocket != null && isStreaming) {
+          // Envoi direct des bytes sans conversion complexe
+          _udpSocket!.send(Uint8List.fromList(data.map((e) => e.toInt()).toList()), InternetAddress(esp32Ip), port);
+        }
+      });
+
+      // _audioSubscription = _recorder.audioStream.listen((data) async {
+      //   if (_udpSocket != null && isStreaming) {
+      //     try {
+      //       int lengthInBytes = data.length;
+      //       int validLength = lengthInBytes - (lengthInBytes % 4);
+      //       if (validLength == 0) return;
+
+      //       Float32List samples = data.buffer.asFloat32List(data.offsetInBytes, validLength ~/ 4);
+      //       final byteData = ByteData(samples.length * 4); // ✅ stéréo
+
+      //       for (int i = 0; i < samples.length; i++) {
+      //         double s = samples[i];
+      //         if (!s.isFinite) s = 0.0;
+
+      //         int sampleInt16 = (s * 25000).toInt().clamp(-32768, 32767);
+
+      //         // Left
+      //         byteData.setInt16(i * 4, sampleInt16, Endian.little);
+      //         // Right
+      //         byteData.setInt16(i * 4 + 2, sampleInt16, Endian.little);
+      //       }
+
+      //       Uint8List fullBuffer = byteData.buffer.asUint8List();
+      //       int chunkSize = 1024;
+
+      //       for (int i = 0; i < fullBuffer.length; i += chunkSize) {
+      //         int end = (i + chunkSize < fullBuffer.length) ? i + chunkSize : fullBuffer.length;
+      //         _udpSocket!.send(Uint8List.sublistView(fullBuffer, i, end), InternetAddress(esp32Ip), port);
+
+      //         // Délai pour l'ESP32
+      //         // await Future.delayed(const Duration(milliseconds: 2));
+      //       }
+      //     } catch (e) {
+      //       debugPrint("Erreur lors du traitement audio : $e");
+      //     }
+      //   }
+      // });
+
+      await _recorder.start();
+    } catch (e) {
+      stopStreaming();
+      setState(() => statusLogs = "Erreur: $e");
+    }
+  }

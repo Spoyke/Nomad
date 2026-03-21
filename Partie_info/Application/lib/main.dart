@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'dart:convert';
 import 'dart:async';
 import 'dart:io';
-
+import 'package:record/record.dart';
 import 'Types/track.dart';
 import 'Types/album.dart';
 import 'utility.dart';
@@ -30,17 +30,17 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   // --- CONFIGURATION & RÉSEAU ---
-  final String esp32Ip = "10.42.0.188";
-  final int port = 12345;
+  final String esp32Ip = "10.42.0.1";
+  final int port = 4953; // Port Snapcast TCP (remplace 1780 pour l'audio)
   late AudioSocketService _socketService;
 
   // --- ÉTAT AUDIO / MICRO ---
   bool isStreaming = false;
-  String statusLogs = "Prêt à diffuser en UDP";
-  RawDatagramSocket? _udpSocket;
+  String statusLogs = "Prêt à diffuser";
+  Socket? _tcpSocket; // Changement de UDP vers TCP pour Snapcast
   final RecorderStream _recorder = RecorderStream();
   StreamSubscription? _audioSubscription;
-
+  late AudioRecorder _audioRecorder;
   // --- ÉTAT LECTEUR ---
   double _currentSliderValue = 6;
   double _currentPosition = 0.0;
@@ -52,11 +52,11 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     trackList = [];
+    _audioRecorder = AudioRecorder(); // Initialisation ici
     _initRecorder();
     _initSocketService();
   }
 
-  // Initialise le service WebSocket et ses callbacks
   void _initSocketService() {
     _socketService = AudioSocketService(
       url: 'ws://10.42.0.1:8765',
@@ -66,7 +66,6 @@ class _MyAppState extends State<MyApp> {
           sortList(trackList);
           buildAlbumList();
         });
-        // Lancement de la récupération des pochettes
         if (albumList.isNotEmpty) {
           _socketService.send("rPI", "get_cover", albumList.first.title);
         }
@@ -80,14 +79,17 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> _initRecorder() async {
-    await _recorder.initialize(sampleRate: 16000);
+    await _recorder.initialize(sampleRate: 16000); // Assure-toi que Snapserver accepte le 16kHz
     debugPrint("Recorder initialisé");
   }
 
   @override
   void dispose() {
     _timer?.cancel();
+    _audioSubscription?.cancel();
+    _tcpSocket?.destroy();
     _socketService.dispose();
+    _audioRecorder.dispose();
     super.dispose();
   }
 
@@ -99,13 +101,9 @@ class _MyAppState extends State<MyApp> {
         albumList[indexAlbumToAsk].cover = bytes;
       });
 
-      debugPrint("Cover reçue pour : ${albumList[indexAlbumToAsk].title}");
-
       indexAlbumToAsk++;
       if (indexAlbumToAsk < albumList.length) {
         _socketService.send("rPI", "get_cover", albumList[indexAlbumToAsk].title);
-      } else {
-        debugPrint("Toutes les covers chargées.");
       }
     } catch (e) {
       debugPrint("Erreur décodage cover: $e");
@@ -137,15 +135,11 @@ class _MyAppState extends State<MyApp> {
       _currentTrack = Track(duration: 1, title: "DÉCONNECTÉ - Reconnexion...", artist: "", album: "");
       _currentPosition = 0;
     });
-    Future.delayed(const Duration(seconds: 2), () {
-      debugPrint("Tentative de reconnexion...");
-      _socketService.connect();
-    });
+    Future.delayed(const Duration(seconds: 2), () => _socketService.connect());
   }
 
-  // --- GESTION DU TIMER ---
   void _startTimer() {
-    _stopTimer(); // Sécurité
+    _stopTimer();
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         if (_currentPosition < _currentTrack.duration) {
@@ -163,87 +157,60 @@ class _MyAppState extends State<MyApp> {
     _timer = null;
   }
 
-  // --- STREAMING MICRO (UDP) ---
+  // --- STREAMING MICRO (TCP / SNAPCAST) ---
+  StreamSubscription<Uint8List>? _audioStreamSubscription;
+
   Future<void> startStreaming() async {
-    pause();
-    if (await Permission.microphone.request().isDenied) {
-      setState(() => statusLogs = "Micro refusé");
-      return;
-    }
     try {
-      _udpSocket = await RawDatagramSocket.bind(InternetAddress.anyIPv4, 0);
-      _udpSocket!.send(utf8.encode("salut"), InternetAddress(esp32Ip), port);
-      debugPrint("salut");
-      setState(() {
-        statusLogs = "🔴 Diffusion active";
-        isStreaming = true;
-      });
+      await _stopAudioResources();
 
-      // --- SUPPRESSION DU MESSAGE "SALUT" (Il pollue le flux audio) ---
+      // 1. Vérifier les permissions
+      if (await _audioRecorder.hasPermission() == false) return;
 
-      // Code bon pour le pythonzzz
-      _audioSubscription = _recorder.audioStream.listen((data) {
-        if (_udpSocket != null && isStreaming) {
-          // Envoi direct des bytes sans conversion complexe
-          _udpSocket!.send(Uint8List.fromList(data.map((e) => e.toInt()).toList()), InternetAddress(esp32Ip), port);
+      // 2. Connexion Socket
+      _tcpSocket = await Socket.connect(esp32Ip, port);
+      _tcpSocket!.setOption(SocketOption.tcpNoDelay, true);
+
+      // 3. Configuration de l'enregistrement
+      // On demande explicitement du PCM 16 bits, 44.1kHz, Mono
+      const config = RecordConfig(encoder: AudioEncoder.pcm16bits, sampleRate: 44100, numChannels: 1);
+
+      // 4. Démarrage du flux
+      final stream = await _audioRecorder.startStream(config);
+
+      _audioStreamSubscription = stream.listen((data) {
+        if (_tcpSocket != null) {
+          // Avec 'record', les données sont déjà en Uint8List (PCM 16-bit)
+          // Pas besoin de conversion manuelle compliquée !
+          _tcpSocket!.add(data);
         }
       });
 
-      // _audioSubscription = _recorder.audioStream.listen((data) async {
-      //   if (_udpSocket != null && isStreaming) {
-      //     try {
-      //       int lengthInBytes = data.length;
-      //       int validLength = lengthInBytes - (lengthInBytes % 4);
-      //       if (validLength == 0) return;
-
-      //       Float32List samples = data.buffer.asFloat32List(data.offsetInBytes, validLength ~/ 4);
-      //       final byteData = ByteData(samples.length * 4); // ✅ stéréo
-
-      //       for (int i = 0; i < samples.length; i++) {
-      //         double s = samples[i];
-      //         if (!s.isFinite) s = 0.0;
-
-      //         int sampleInt16 = (s * 25000).toInt().clamp(-32768, 32767);
-
-      //         // Left
-      //         byteData.setInt16(i * 4, sampleInt16, Endian.little);
-      //         // Right
-      //         byteData.setInt16(i * 4 + 2, sampleInt16, Endian.little);
-      //       }
-
-      //       Uint8List fullBuffer = byteData.buffer.asUint8List();
-      //       int chunkSize = 1024;
-
-      //       for (int i = 0; i < fullBuffer.length; i += chunkSize) {
-      //         int end = (i + chunkSize < fullBuffer.length) ? i + chunkSize : fullBuffer.length;
-      //         _udpSocket!.send(Uint8List.sublistView(fullBuffer, i, end), InternetAddress(esp32Ip), port);
-
-      //         // Délai pour l'ESP32
-      //         // await Future.delayed(const Duration(milliseconds: 2));
-      //       }
-      //     } catch (e) {
-      //       debugPrint("Erreur lors du traitement audio : $e");
-      //     }
-      //   }
-      // });
-
-      await _recorder.start();
+      setState(() {
+        isStreaming = true;
+        statusLogs = "🔴 Diffusion active (record)";
+      });
     } catch (e) {
+      debugPrint("Erreur : $e");
       stopStreaming();
-      setState(() => statusLogs = "Erreur: $e");
     }
   }
 
-  Future<void> stopStreaming() async {
-    await _audioSubscription?.cancel();
-    await _recorder.stop();
-    _udpSocket?.close();
-    _udpSocket = null;
+  Future<void> _stopAudioResources() async {
+    await _audioStreamSubscription?.cancel();
+    await _audioRecorder.stop();
+    _tcpSocket?.destroy();
+    _tcpSocket = null;
+    setState(() => isStreaming = false);
+  }
 
-    setState(() {
-      isStreaming = false;
-      statusLogs = "Arrêté.";
-    });
+  Future<void> stopStreaming() async {
+    await _stopAudioResources();
+    if (mounted) {
+      setState(() {
+        statusLogs = "Arrêté.";
+      });
+    }
   }
 
   @override
