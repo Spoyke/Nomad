@@ -255,10 +255,13 @@ Simon : Soudure des derniers composants sur le pcb audio (connecteur). Et test d
 
 Gabriel : Création montage pour test encodeurs et début création code test encodeurs.
 
+Julie : Continuation du PCB commande
+
 ### Séance 19 (17/03/2026)
 
 Gabriel : Test encodeurs, création morceaux de code pour detecter le sens de rotation du moteur aunsi que valeur absolue pour vérifier vitesse. Finitions pcb fait par Julie.
 
+Julie : Verification PCB et commande du PCB.
 ## Ressources
 
 ### Lien utiles
