@@ -262,6 +262,9 @@ Julie : Continuation du PCB commande
 Gabriel : Test encodeurs, création morceaux de code pour detecter le sens de rotation du moteur aunsi que valeur absolue pour vérifier vitesse. Finitions pcb fait par Julie.
 
 Julie : Verification PCB et commande du PCB.
+
+### Séance 20 (24/03/2026)
+
 ## Ressources
 
 ### Lien utiles
