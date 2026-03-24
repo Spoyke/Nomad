@@ -265,6 +265,8 @@ Julie : Verification PCB et commande du PCB.
 
 ### Séance 20 (24/03/2026)
 
+Gabriel : Finitions code encodeurs, test avec driver moteurs.
+
 ## Ressources
 
 ### Lien utiles
