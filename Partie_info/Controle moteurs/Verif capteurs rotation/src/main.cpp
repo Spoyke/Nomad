@@ -63,6 +63,6 @@ void loop() {
   static unsigned long lastPrint = 0;
   if (millis() - lastPrint >= 200) {
     lastPrint = millis();
-    Serial.printf("Encoder pos: %d  C1=%d C2=%d\n", encoderPosition, c1, c2);
+    Serial.printf("Encoder pos: %d\n", encoderPosition);
   }
 }
