@@ -271,6 +271,8 @@ Gabriel : Finitions code encodeurs, test avec driver moteurs.
 
 Simon : Travail sur le PCB de la partie audio, l'I2C semble fonctionner mais je ne sais pas pourquoi. Quand je met l'adresse du composant, la communication ne passe pas mais quand je met une autre adresse (0x38) la communication semble fonctionner sauf quand j'essaye de lire les valeurs d'un registre qui crée des problème. De même quand j'essai de lancer l'ampli, la communication ne fonctionne pas mais quand je n'essai pas de lancer l'ampli et que j'écrit seulement dans les registres de configuration, la communication semble fonctionner. Le problème vient peut être du pin d'adressage du composant mais après l'avoir ressoudé avec Patricia, je n'ai pas vu de différence dans les résultats. L'erreur dans la lecture vient peut-être du code qui ne terminait jamais la transmission mais encore, sans terminer la communication, j'avais des valeurs quand je lisais plusieurs registres différents et dans la même communication.
 
+Axel : Son du micro enfin fonctionnel sur l'ESP32, il faut maintenant harmoniser le code de la gestion de l'audio
+
 ## Ressources
 
 ### Lien utiles
