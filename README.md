@@ -255,9 +255,30 @@ Simon : Soudure des derniers composants sur le pcb audio (connecteur). Et test d
 
 Gabriel : Création montage pour test encodeurs et début création code test encodeurs.
 
+Julie : Continuation du PCB commande
+
 ### Séance 19 (17/03/2026)
 
 Gabriel : Test encodeurs, création morceaux de code pour detecter le sens de rotation du moteur aunsi que valeur absolue pour vérifier vitesse. Finitions pcb fait par Julie.
+
+Julie : Verification PCB et commande du PCB.
+
+Simon : Travail sur le PCB de la partie audio -> L'I2C semble fonctionner
+
+### Séance 20 (24/03/2026)
+
+Gabriel : Finitions code encodeurs, test avec driver moteurs.
+
+Julie : Soudure sur le PCB commandé la semaine précédente. Vérification des erreurs corrigés (empreintes, tailles pistes pour laisser passer le courant). Dimension du boitiers à refaire pour optimiser l'emplacement du PCB, moteurs et haut parleur. 
+
+Simon : Travail sur le PCB de la partie audio, l'I2C semble fonctionner mais je ne sais pas pourquoi. Quand je met l'adresse du composant, la communication ne passe pas mais quand je met une autre adresse (0x38) la communication semble fonctionner sauf quand j'essaye de lire les valeurs d'un registre qui crée des problème. De même quand j'essai de lancer l'ampli, la communication ne fonctionne pas mais quand je n'essai pas de lancer l'ampli et que j'écrit seulement dans les registres de configuration, la communication semble fonctionner. Le problème vient peut être du pin d'adressage du composant mais après l'avoir ressoudé avec Patricia, je n'ai pas vu de différence dans les résultats. L'erreur dans la lecture vient peut-être du code qui ne terminait jamais la transmission mais encore, sans terminer la communication, j'avais des valeurs quand je lisais plusieurs registres différents et dans la même communication.
+
+Axel : Son du micro enfin fonctionnel sur l'ESP32, il faut maintenant harmoniser le code de la gestion de l'audio
+
+### Séance extra 21 (07/04/2026)
+
+Teste de l'alimentation du PCB : 3V3, 5V, 12V marchent très bien. En revanche, le PCB audio fait court-circuiter une piste, ce qui entraine le surchauffe de la bobine. L'esp 32 est fonctionne bien sur le PCB et les connecteurs sont bien reliés aux capteurs. 
+
 
 ## Ressources
 
