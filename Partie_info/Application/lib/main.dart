@@ -173,7 +173,7 @@ class _MyAppState extends State<MyApp> {
 
       // 3. Configuration de l'enregistrement
       // On demande explicitement du PCM 16 bits, 44.1kHz, Mono
-      const config = RecordConfig(encoder: AudioEncoder.pcm16bits, sampleRate: 44100, numChannels: 1);
+      const config = RecordConfig(encoder: AudioEncoder.pcm16bits, sampleRate: 44100, numChannels: 2);
 
       // 4. Démarrage du flux
       final stream = await _audioRecorder.startStream(config);

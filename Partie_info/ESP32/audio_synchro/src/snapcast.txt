@@ -1,0 +1,40 @@
+#include "AudioLogger.h"
+#include "SnapClient.h"
+
+// Configuration WiFi
+const char *ssid = "MonHotspot";
+const char *password = "axel1234";
+
+// On définit la sortie Audio (I2S pour un DAC externe type PCM5102)
+I2SStream out; 
+WiFiClient wifi;
+// On utilise un décodeur de copie (pour du PCM brut envoyé par le serveur)
+CopyDecoder decoder; 
+SnapClient client(wifi, out, decoder);
+
+void setup() {
+  Serial.begin(115200);
+  AudioLogger::instance().begin(Serial, AudioLogger::Info);
+  // 1. Connexion WiFi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("Connecté !");
+
+  auto cfg = out.defaultConfig(TX_MODE);
+  cfg.pin_bck = 17;
+  cfg.pin_data = 16;
+  cfg.pin_ws = 18;
+  cfg.sample_rate = 44100;
+  cfg.channels = 2;
+  cfg.bits_per_sample = 16;
+  out.begin(cfg);
+  // 4. Démarrage
+  client.begin();
+}
+
+void loop() {
+  client.doLoop();
+}
